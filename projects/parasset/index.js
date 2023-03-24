@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { stakings } = require("../helper/staking");
 
@@ -8,7 +9,7 @@ const ETH = "0x0000000000000000000000000000000000000000";
 
 const PUSDInsPool = "0x79025438C04Ae6A683Bcc7f7c51a01Eb4C2DDabA"; //Insurance-USD pool contract
 const PUSD = "0xCCEcC702Ec67309Bc3DDAF6a42E9e5a6b8Da58f0";
-const USDT = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
+const USDT = ADDRESS_CONSTANTS.USDT;
 
 const PETHInsPool = "0x0bd32fFC80d5B98E403985D4446AE3BA67528C2e"; //Insurance-ETH pool contract
 const PETH = "0x53f878fb7ec7b86e4f9a0cb1e9a6c89c0555fbbd";

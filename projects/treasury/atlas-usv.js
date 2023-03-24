@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const treasuryContractsETH = ["0x8739f0EeF3163C3db7b994d0e301BC375d757aF6"];
@@ -19,7 +20,7 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [ 
         nullAddress,
-        '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+        ADDRESS_CONSTANTS.DAI,
      ],
     owners: treasuryContractsETH,
     ownTokens: [USV],

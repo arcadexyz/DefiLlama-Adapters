@@ -1,9 +1,10 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 module.exports = {
   chains: [
     {
       id: 1,
       name: 'ethereum',
-      stable: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
+      stable: ADDRESS_CONSTANTS.USDC, // USDC
       holders: [
         '0xb80fDAA74dDA763a8A158ba85798d373A5E84d84', // portal v1
         '0xb8f275fBf7A959F4BCE59999A2EF122A099e81A8', // portal v2

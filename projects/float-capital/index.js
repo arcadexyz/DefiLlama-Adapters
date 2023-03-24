@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens, unwrapCreamTokens } = require("../helper/unwrapLPs");
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
@@ -21,9 +22,9 @@ const avDAI = "0x47afa96cdc9fab46904a55a6ad4bf6660b53c38a";
 const DAI = "0xd586e7f844cea2f87f50152665bcbc2c279d8d70";
 const transforms = {
   "0x47afa96cdc9fab46904a55a6ad4bf6660b53c38a":
-    "0x6b175474e89094c44da98b954eedeac495271d0f", // avDAI
+    ADDRESS_CONSTANTS.DAI, // avDAI
   "0xd586e7f844cea2f87f50152665bcbc2c279d8d70":
-    "0x6b175474e89094c44da98b954eedeac495271d0f", // DAI
+    ADDRESS_CONSTANTS.DAI, // DAI
 };
 
 async function polyTvl(time, ethBlock, chainBlocks) {

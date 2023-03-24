@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const http = require('../helper/http');
 const BigNumber = require("bignumber.js");
@@ -15,7 +16,7 @@ const EVEROWN_DAO_API = 'https://app.everrise.com/prod/api/v1/contracts/active'
 const chainConfig = {
   ethereum: {
     chainId: '1',
-    WCoin: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    WCoin: ADDRESS_CONSTANTS.WETH,
     lpFactory: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     LPs: [
       {
@@ -24,8 +25,8 @@ const chainConfig = {
       }, // RISE-ETH
     ],
     reserveTokens: [
-      "0xdAC17F958D2ee523a2206206994597C13D831ec7", // USDT
-      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+      ADDRESS_CONSTANTS.USDT, // USDT
+      ADDRESS_CONSTANTS.USDC, // USDC
       TOKEN,
     ],
   },

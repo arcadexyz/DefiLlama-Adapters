@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 // const utils = require('web3-utils');
 const sdk = require('@defillama/sdk');
 const MakerSCDConstants = require("./abis/makerdao.js");
@@ -111,7 +112,7 @@ async function unwrapGunis({ api, toa, balances = {} }) {
     sdk.util.sumSingleBalance(balances, token0s[i], token0Bal)
     sdk.util.sumSingleBalance(balances, token1s[i], token1Bal)
   })
-  sdk.util.removeTokenBalance(balances, '0x6b175474e89094c44da98b954eedeac495271d0f') // remove dai balances
+  sdk.util.removeTokenBalance(balances, ADDRESS_CONSTANTS.DAI) // remove dai balances
   return balances
 }
 

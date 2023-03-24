@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const aragonTreasury = "0xfb633F47A84a1450EE0413f2C32dC1772CcAea3e";
@@ -9,9 +10,9 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [ 
         nullAddress,
-        '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',//USDC
-        '0x6B175474E89094C44Da98b954EedeAC495271d0F',//DAI
-        '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',//WETH
+        ADDRESS_CONSTANTS.USDC,//USDC
+        ADDRESS_CONSTANTS.DAI,//DAI
+        ADDRESS_CONSTANTS.WETH,//WETH
         '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',//UNI
         '0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72',//ENS
         '0x4Fabb145d64652a948d72533023f6E7A623C7C53',//BUSD

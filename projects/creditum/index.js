@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { stakingPricedLP } = require("../helper/staking");
 const { sumTokensSharedOwners } = require("../helper/unwrapLPs");
 const { pool2 } = require("../helper/pool2");
@@ -9,7 +10,7 @@ async function tvl(time, ethBlock, chainBlocks){
     const chain = 'fantom'
     const block = chainBlocks[chain]
     const balances = {}
-    const transform = addr=> addr==="0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e"?"0x6b175474e89094c44da98b954eedeac495271d0f":`${chain}:${addr}`
+    const transform = addr=> addr==="0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e"?ADDRESS_CONSTANTS.DAI:`${chain}:${addr}`
     await sumTokensSharedOwners(balances, [
         "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
         "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",

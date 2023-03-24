@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const { sumTokens2, nullAddress, sumTokensExport } = require('./helper/unwrapLPs')
 
 const HAKKA_ADDRESSES = {
@@ -22,7 +23,7 @@ async function ethereum(_, block) {
     [nullAddress, hakkaGuildBank],
     ['0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2', hakkaGuildBank],
     ['0x35101c731b1548B5e48bb23F99eDBc2f5c341935', hakkaGuildBank],
-    ['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', hakkaGuildBank],
+    [ADDRESS_CONSTANTS.USDC, hakkaGuildBank],
   ]
 
   return sumTokens2({ tokensAndOwners: toa, block, })

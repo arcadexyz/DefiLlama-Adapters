@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const { staking } = require('./helper/staking');
 const { sumTokens2, } = require('./helper/unwrapLPs');
 
@@ -8,12 +9,12 @@ const y2USDT = { addr: "0x2f08119c6f07c006695e079aafc638b8789faf18", dec: 6, get
 const Y2TUSD = { addr: "0x37d19d1c4e1fa9dc47bd1ea12f742a0887eda74a", dec: 18, getPrice: false, type: 'yv', pfsDec: 18 } ///Y2TUSD                      yv
 const yyDAIT = { addr: "0x5dbcf33d8c2e976c6b560249878e6f1491bca25c", dec: 18, getPrice: false, type: 'yv', pfsDec: 18 } ///yyDAI+yUSDC+yUSDT+yTUSD    hbtc
 const yyDAIB = { addr: "0x2994529c0652d127b7842094103715ec5299bbed", dec: 18, getPrice: false, type: 'yv', pfsDec: 18 } ///yyDAI+yUSDC+yUSDT+yBUSD    hbtc
-const WETH = { addr: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", dec: 18, get getPrice() { return this.addr }, type: '' } ///WETH                       crvETH
+const WETH = { addr: ADDRESS_CONSTANTS.WETH, dec: 18, get getPrice() { return this.addr }, type: '' } ///WETH                       crvETH
 const eCRV = { addr: "0xa3d87fffce63b53e0d54faa1cc983b7eb0b74a9c", dec: 18, getPrice: WETH.getPrice, type: '' } ///eCRV                       crvETH
 const steCRV = { addr: "0x06325440d014e39736583c165c2963ba99faf14e", dec: 18, getPrice: WETH.getPrice, type: '' } ///steCRV                      crvETH
 const ankrCRV = { addr: "0xaa17a236f2badc98ddc0cf999abb47d47fc0a6cf", dec: 18, getPrice: WETH.getPrice, type: '' } ///ankrCRV                    crvETH
 
-const usdc = { addr: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", dec: 6, getPrice: false, type: '' } ///fUSD
+const usdc = { addr: ADDRESS_CONSTANTS.USDC, dec: 6, getPrice: false, type: '' } ///fUSD
 const fUSDC = { addr: "0xf0358e8c3cd5fa238a29301d0bea3d63a17bedbe", dec: 6, getPrice: false, type: 'yv', pfsDec: 6 } ///fUSD
 const fUSDT = { addr: "0x053c80ea73dc6941f518a68e2fc52ac45bde7c9c", dec: 6, getPrice: false, type: 'yv', pfsDec: 6 } ///fUSD
 const fDAI = { addr: "0xab7fa2b2985bccfc13c6d86b1d5a17486ab1e04c", dec: 18, getPrice: false, type: 'yv', pfsDec: 18 } ///fUSD

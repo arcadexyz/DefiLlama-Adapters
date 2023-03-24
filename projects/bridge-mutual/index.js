@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
 const { sumTokens2, sumTokensExport } = require('../helper/unwrapLPs')
@@ -8,7 +9,7 @@ const config = {
     staking: ["0x81d73999fabec7e8355d76d1010afbe3068f08fa", "0x55978a6f6a4cfa00d5a8b442e93e42c025d0890c"],
     PolicyBookRegistry: "0xff13c3d2c7931e86e13c993a8cb02d68848f9613",
     ShieldMining: "0x6d6fCf279a63129797def89dBA82a65b3386497e",
-    usdt: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    usdt: ADDRESS_CONSTANTS.USDT,
     bmi: "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
   },
   bsc: {

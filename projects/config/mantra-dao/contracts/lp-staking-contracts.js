@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../../../utils/constants.js');
 const lpStakingAssetsETH = [
   // LABS-ETH UNI LP simple staking
   {
@@ -5,7 +6,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0x2d9fd51e896ff0352cb6d697d13d04c2cb85ca83",
     token1: "0x2D9FD51E896Ff0352Cb6D697D13D04C2CB85CA83",
     price1: "labs-group",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // LABS-ETH UNI LP staking with exit tollbooth
@@ -14,7 +15,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0x2d9fd51e896ff0352cb6d697d13d04c2cb85ca83",
     token1: "0x2D9FD51E896Ff0352Cb6D697D13D04C2CB85CA83",
     price1: "labs-group",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // MANTRA DAO OM-ETH LP staking
@@ -23,7 +24,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0xe46935ae80e05cdebd4a4008b6ccaa36d2845370",
     token1: "0x3593D125a4f7849a1B059E64F4517A86Dd60c95d",
     price1: "mantra-dao",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // ROYA-ETH LP staking
@@ -32,7 +33,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0x6d9d2427cfa49e39b4667c4c3f627e56ae586f37",
     token1: "0x4Cd4c0eEDb2bC21f4e280d0Fe4C45B17430F94A9",
     price1: "royale",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // BITE-ETH LP staking
@@ -41,7 +42,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0x1f07f8e712659087914b96db4d6f6e4fee32285e",
     token1: "0x4eed0fa8de12d5a86517f214c2f11586ba2ed88d",
     price1: "dragonbite",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // BITE-ETH LP staking w/ tollbooth
@@ -50,14 +51,14 @@ const lpStakingAssetsETH = [
     pairAddress: "0x1f07f8e712659087914b96db4d6f6e4fee32285e",
     token1: "0x4eed0fa8de12d5a86517f214c2f11586ba2ed88d",
     price1: "dragonbite",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // BBANK-ETH LP staking
   {
     contract: "0x6406788d1CD4fdD823ef607A924c00a4244a841d",
     pairAddress: "0x2a182e532a379cb2c7f1b34ce3f76f3f7d3596f7",
-    token1: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token1: ADDRESS_CONSTANTS.WETH,
     price1: "weth",
     token2: "0xf4b5470523ccd314c6b9da041076e7d79e0df267",
     price2: "blockbank",
@@ -68,7 +69,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0x4fc47579ecf6aa76677ee142b6b75faf9eeafba8",
     token1: "0x5eaa69b29f99c84fe5de8200340b4e9b4ab38eac",
     price1: "raze-network",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
   // BCUBE-ETH LP staking
@@ -77,7 +78,7 @@ const lpStakingAssetsETH = [
     pairAddress: "0xc62bf2c79f34ff24e2f97982af4f064161ed8949",
     token1: "0x93c9175e26f57d2888c7df8b470c9eea5c0b0a93",
     price1: "b-cube-ai",
-    token2: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    token2: ADDRESS_CONSTANTS.WETH,
     price2: "weth",
   },
 ];

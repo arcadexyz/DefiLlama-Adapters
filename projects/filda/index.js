@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const sdk = require('@defillama/sdk');
 const abi = require('./abi.json');
@@ -35,9 +36,9 @@ function transformAddress(token) {
   if (token === '0x6f259637dcd74c767781e37bc6133cd6a68aa161') {
     return token
   } else if (token === '0x3D760a45D0887DFD89A2F5385a236B29Cb46ED2a') {
-    return '0x6b175474e89094c44da98b954eedeac495271d0f';//DAI => DAI
+    return ADDRESS_CONSTANTS.DAI;//DAI => DAI
   } else if (token === '0x9362Bbef4B8313A8Aa9f0c9808B80577Aa26B73B') {
-    return '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';//USDC => USDC
+    return ADDRESS_CONSTANTS.USDC;//USDC => USDC
   } else if (token === "0x5eE41aB6edd38cDfB9f6B4e6Cf7F75c87E170d98") {
     return "0x0000000000085d4780b73119b644ae5ecd22b376" //TUSD
   } else {

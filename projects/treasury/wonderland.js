@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const {  nullAddress,treasuryExports } = require("../helper/treasury");
 
 //eth
@@ -21,11 +22,11 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [ 
         nullAddress,
-        '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',//USDC
-        '0x6B175474E89094C44Da98b954EedeAC495271d0F',//DAI
+        ADDRESS_CONSTANTS.USDC,//USDC
+        ADDRESS_CONSTANTS.DAI,//DAI
         '0x028171bCA77440897B824Ca71D1c56caC55b68A3',//aDAI
-        '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',//WETH
-        '0xdAC17F958D2ee523a2206206994597C13D831ec7',//USDT
+        ADDRESS_CONSTANTS.WETH,//WETH
+        ADDRESS_CONSTANTS.USDT,//USDT
         '0xFcF8eda095e37A41e002E266DaAD7efC1579bc0A',//flex
         '0xdB25f211AB05b1c97D595516F45794528a807ad8',//eurs
         '0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6',//stg

@@ -1,9 +1,10 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { staking } = require("../helper/staking");
 const BigNumber = require("bignumber.js");
 
 const stakingETHContract = "0x27F0408729dCC6A4672e1062f5003D2a07E4E10D";
-const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const WETH = ADDRESS_CONSTANTS.WETH;
 
 const stakingCARBONContract = "0x2C5058325373d02Dfd6c08E48d91FcAf8fD49f45";
 const CARBON = "0xfa42da1bd08341537a44a4ca9d236d1c00a98b40";

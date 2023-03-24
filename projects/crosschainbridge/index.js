@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const BigNumber = require("bignumber.js");
 
@@ -33,11 +34,11 @@ const tokens = {
     BRIDGE: "0x92868a5255c628da08f550a858a802f5351c5223",
     // Stablecoins
     BUSD: "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
-    DAI: "0x6b175474e89094c44da98b954eedeac495271d0f",
-    USDC: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-    USDT: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    DAI: ADDRESS_CONSTANTS.DAI,
+    USDC: ADDRESS_CONSTANTS.USDC,
+    USDT: ADDRESS_CONSTANTS.USDT,
     // Network Tokens
-    WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    WETH: ADDRESS_CONSTANTS.WETH,
     WMATIC: "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
     // Further tokens
     BULK: "0xa143ac515dca260a46c742c7251ef3b268639593",

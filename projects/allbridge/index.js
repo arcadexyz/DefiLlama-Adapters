@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const sdk = require('@defillama/sdk')
 const solana = require('../helper/solana')
@@ -124,10 +125,10 @@ const data = {
             {name: "ariadne", address: "0xb1c9bc94aCd2fAE6aABf4ffae4429B93512a81D2", decimals: 18},
             {name: "cyberfi", address: "0x63b4f3e3fa4e438698CE330e365E831F7cCD1eF4", decimals: 18},
             {name: "ethereum", address: NATIVE_ADDRESS, decimals: 18},
-            {name: "usd-coin", address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", decimals: 6},
-            {name: "tether", address: "0xdAC17F958D2ee523a2206206994597C13D831ec7", decimals: 6},
+            {name: "usd-coin", address: ADDRESS_CONSTANTS.USDC, decimals: 6},
+            {name: "tether", address: ADDRESS_CONSTANTS.USDT, decimals: 6},
             {name: "ftx-token", address: "0x50D1c9771902476076eCFc8B2A83Ad6b9355a4c9", decimals: 18},
-            {name: "dai", address: "0x6B175474E89094C44Da98b954EedeAC495271d0F", decimals: 18},
+            {name: "dai", address: ADDRESS_CONSTANTS.DAI, decimals: 18},
             {name: "bitcoin", address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", decimals: 8},
             {name: "magic-internet-money", address: "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3", decimals: 18},
             {name: "fei-usd", address: "0x956F47F50A910163D8BF957Cf5846D573E7f87CA", decimals: 18},

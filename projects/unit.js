@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 
 const { sumTokens } = require('./helper/unwrapLPs');
 
@@ -9,9 +10,9 @@ async function tvl(ts, block) {
     '0x92e187a03b6cd19cb6af293ba17f2745fd2357d5',
     '0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44',
     '0x2ba592F78dB6436527729929AAf6c908497cB200',
-    '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    ADDRESS_CONSTANTS.WETH,
     '0x0Ae055097C6d159879521C384F1D2123D1f195e6',
-    '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    ADDRESS_CONSTANTS.USDC,
     '0xbC396689893D065F41bc2C6EcbeE5e0085233447',
     '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
     '0x4e15361fd6b4bb609fa63c81a2be19d873717870',
@@ -28,7 +29,7 @@ async function tvl(ts, block) {
     '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599', //wbtc
     '0xeb4c2781e4eba804ce9a9803c67d0893436bb27d', //renbtc
     '0xd291e7a03283640fdc51b121ac401383a46cc623',
-    '0x6b175474e89094c44da98b954eedeac495271d0f', //dai
+    ADDRESS_CONSTANTS.DAI, //dai
   ];
   const toa = tokens.map(t => [t, pool])
   return sumTokens({}, toa, block)

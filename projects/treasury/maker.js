@@ -1,8 +1,9 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const treasury = "0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB";
 const MKR = "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2";
-const DAI = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+const DAI = ADDRESS_CONSTANTS.DAI
 
 
 module.exports = treasuryExports({

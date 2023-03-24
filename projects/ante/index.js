@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const { sumTokens2, nullAddress } = require('../helper/unwrapLPs');
 const { createIncrementArray } = require('../helper/utils');
@@ -15,7 +16,7 @@ const CONFIG = {
       },
     ],
     startBlock: 13234803,
-    gasToken: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    gasToken: ADDRESS_CONSTANTS.WETH,
   },
   avax: {
     factories: [

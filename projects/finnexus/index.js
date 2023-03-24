@@ -1,9 +1,10 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokensExport } = require('../helper/unwrapLPs')
 const config = {
   ethereum: [
     // ['0xef9cd7882c067686691b6ff49e650b43afbbcc6b', '0x919a35A4F40c479B3319E3c3A2484893c06fd7de'],
-    ['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', '0xff60d81287BF425f7B2838a61274E926440ddAa6'],
-    ['0xdac17f958d2ee523a2206206994597c13d831ec7', '0xff60d81287BF425f7B2838a61274E926440ddAa6'],
+    [ADDRESS_CONSTANTS.USDC, '0xff60d81287BF425f7B2838a61274E926440ddAa6'],
+    [ADDRESS_CONSTANTS.USDT, '0xff60d81287BF425f7B2838a61274E926440ddAa6'],
     ['0x853d955acef822db058eb8505911ed77f175b99e', '0x6f88e8fbF5311ab47527f4Fb5eC10078ec30ab10'],
   ],
   wan: [

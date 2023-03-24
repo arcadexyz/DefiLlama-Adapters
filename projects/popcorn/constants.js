@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const ADDRESSES = {
 
   ethereum: {
@@ -12,8 +13,8 @@ const ADDRESSES = {
 
     pop: "0xd0cd466b34a24fcb2f87676278af2005ca8a78c4",
 
-    usdc: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-    dai: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    usdc: ADDRESS_CONSTANTS.USDC,
+    dai: ADDRESS_CONSTANTS.DAI,
 
     // for butter
     setBasicIssuanceModule: "0xd8EF3cACe8b4907117a45B0b125c68560532F94D",

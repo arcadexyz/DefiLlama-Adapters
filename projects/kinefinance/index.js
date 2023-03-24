@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { BigNumber } = require("bignumber.js");
 const { unwrapUniswapLPs } = require("../helper/unwrapLPs");
@@ -123,14 +124,14 @@ async function getBorrowed(block, chain, kMcd) {
     chain
   })).output;
 
-  sdk.util.sumSingleBalance(balances, "0xdac17f958d2ee523a2206206994597c13d831ec7", BigNumber(totalBorrows).div(1e12).toFixed(0));
+  sdk.util.sumSingleBalance(balances, ADDRESS_CONSTANTS.USDT, BigNumber(totalBorrows).div(1e12).toFixed(0));
 
   return balances;
 }
 
 const ethUnitroller = "0xbb7d94a423f4978545ecf73161f0678e8afd1a92";
 const keth = "0xa58e822de1517aae7114714fb354ee853cd35780";
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const weth = ADDRESS_CONSTANTS.WETH;
 const ethXKine = "0xa8d7643324df0f38764f514eb1a99d8f379cc692";
 const ethKine = "0xcbfef8fdd706cde6f208460f2bf39aa9c785f05d";
 const ethkMcd = "0xaf2617aa6fd98581bb8cb099a16af74510b6555f";

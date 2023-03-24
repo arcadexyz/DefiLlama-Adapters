@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens2 } = require('../helper/unwrapLPs')
 
 const config = {
@@ -51,11 +52,11 @@ const yPoolDepositContract = {
     },
     "USDT": {
       "contractAddress": "0x8e921191a9dc6832C1c360C7c7B019eFB7c29B2d",
-      "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+      "tokenAddress": ADDRESS_CONSTANTS.USDT
     },
     "USDC": {
       "contractAddress": "0xdD8B0995Cc92c7377c7bce2A097EC70f45A192D5",
-      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      "tokenAddress": ADDRESS_CONSTANTS.USDC
     },
     "XY": {
       "contractAddress": "0x7fE09D2310A647c7C5043daE2053ff86956cE952",

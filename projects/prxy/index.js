@@ -1,7 +1,8 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = "uint256:getTVLInUsd";
 const axios = require("axios");
-const usdc = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const usdc = ADDRESS_CONSTANTS.USDC;
 const prxy = "0xab3d689c22a2bb821f50a4ff0f21a7980dcb8591";
 const prxyTransformed = `polygon:${prxy}`;
 const wbtc = "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599";
@@ -79,7 +80,7 @@ async function farmPrxyStaking(timestamp, ethBlock, chainBlocks){
     chain: "polygon"
   })).output;
 
-return {'0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48': farmStaking} 
+return {[ADDRESS_CONSTANTS.USDC]: farmStaking} 
 }
 
 

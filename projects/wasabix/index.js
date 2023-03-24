@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
 const { sumTokens } = require("../helper/unwrapLPs")
@@ -7,7 +8,7 @@ const { pool2s } = require('../helper/pool2')
 const tokens = {
   dai: {
     token:'DAI',
-    address:'0x6b175474e89094c44da98b954eedeac495271d0f',
+    address:ADDRESS_CONSTANTS.DAI,
     decimals:18,
     correspondingMintableToken: 'waUSD'
   },
@@ -48,7 +49,7 @@ const tokens = {
   },
   weth: {
     token:'WETH',
-    address:'0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    address:ADDRESS_CONSTANTS.WETH,
     decimals:18,
     correspondingMintableToken: 'waETH'
   },
@@ -65,7 +66,7 @@ const tokens = {
   },
   usdc: {
     token: 'usdc',
-    address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    address: ADDRESS_CONSTANTS.USDC,
     decimals: 6
   }
 }

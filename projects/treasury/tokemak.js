@@ -1,10 +1,11 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const treasury = "0x8b4334d4812C530574Bd4F2763FcD22dE94A969B";
 
 const tokens = [
   nullAddress,
-  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+  ADDRESS_CONSTANTS.USDC, // USDC
   "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84", // stETH
   "0x9C4A4204B79dd291D6b6571C5BE8BbcD0622F050", // TCR
   "0x4104b135DBC9609Fc1A9490E61369036497660c8", // APW

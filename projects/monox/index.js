@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const {sumTokensSharedOwners} = require('../helper/unwrapLPs')
 
 async function eth(timestamp, ethBlock, chainBlocks){
@@ -7,9 +8,9 @@ async function eth(timestamp, ethBlock, chainBlocks){
         "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
         "0x92e187a03b6cd19cb6af293ba17f2745fd2357d5",
         "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-        "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-        "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        ADDRESS_CONSTANTS.WETH,
+        ADDRESS_CONSTANTS.USDT,
+        ADDRESS_CONSTANTS.USDC
     ], ["0x59653E37F8c491C3Be36e5DD4D503Ca32B5ab2f4"], ethBlock)
     return balances
 }

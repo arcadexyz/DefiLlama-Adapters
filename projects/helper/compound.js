@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const sdk = require('@defillama/sdk');
 const abi = require('./abis/compound.json');
@@ -37,7 +38,7 @@ async function getMarkets(comptroller, block, chain, cether, cetheEquivalent, bl
         return;
       }
       if (cToken === '0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5'.toLowerCase()) {
-        markets.push({ underlying: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', cToken })  //cETH => WETH
+        markets.push({ underlying: ADDRESS_CONSTANTS.WETH, cToken })  //cETH => WETH
         return;
       }
       if (cToken === '0x5C0401e81Bc07Ca70fAD469b451682c0d747Ef1c'.toLowerCase() && chain === 'avax') {
@@ -103,7 +104,7 @@ async function unwrapPuffTokens(balances, lpPositions, block) {
 let marketsCache = {}
 
 function getCompoundV2Tvl(comptroller, chain = "ethereum", transformAdress,
-  cether = "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5", cetheEquivalent = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  cether = "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5", cetheEquivalent = ADDRESS_CONSTANTS.WETH,
   borrowed = false, checkForLPTokens = undefined,
   {
     fetchBalances = false,

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const BigNumber = require("bignumber.js");
 const sdk = require("@defillama/sdk");
 const { get } = require('./helper/http')
@@ -26,7 +27,7 @@ let coinDecimals = [
     '0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd': '2', //GUSD
     '0x39AA39c021dfbaE8faC545936693aC917d5E7563': '8', //cUSD
     '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643': '8', //cDAI
-    '0xdAC17F958D2ee523a2206206994597C13D831ec7': '6', //USDT
+    [ADDRESS_CONSTANTS.USDT]: '6', //USDT
     '0x73a052500105205d34Daf004eAb301916DA8190f': '18', //yTUSD
     '0xd6aD7a6750A7593E092a9B218d66C0A814a3436e': '6', ///yUSDC
     '0x16de59092dAE5CcF4A1E6439D611fd0653f0Bd01': '18', ///yDAI
@@ -40,8 +41,8 @@ let coinDecimals = [
     '0xC2cB1040220768554cf699b0d863A3cd4324ce32': '18', ///y2DAI
     '0xE6354ed5bC4b393a5Aad09f21c46E101e692d447': '6', ///y2USDT
     '0x57Ab1ec28D129707052df4dF418D58a2D46d5f51': '18', //sUSD
-    '0x6B175474E89094C44Da98b954EedeAC495271d0F': '18', //DAI
-    '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48': '6', //USDC
+    [ADDRESS_CONSTANTS.DAI]: '18', //DAI
+    [ADDRESS_CONSTANTS.USDC]: '6', //USDC
     '0x5BC25f649fc4e26069dDF4cF4010F9f706c23831': '18', //dusd
     '0x0000000000085d4780B73119b644AE5ecd22b376': '18'
   }
@@ -71,7 +72,7 @@ async function tvl(ts, block) {
   const balances = {}
   const wBTC = '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599'
   sdk.util.sumSingleBalance(balances, wBTC, btcTVL * 1e8)
-  sdk.util.sumSingleBalance(balances, '0xdac17f958d2ee523a2206206994597c13d831ec7', tvl * 1e6) // add as usdt
+  sdk.util.sumSingleBalance(balances, ADDRESS_CONSTANTS.USDT, tvl * 1e6) // add as usdt
   return balances;
 }
 

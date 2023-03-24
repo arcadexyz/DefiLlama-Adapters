@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { getConfig } = require('../helper/cache')
 
@@ -6,7 +7,7 @@ const { sumTokens } = require('../helper/unwrapLPs')
 const vaultAbi = require("./vaultAbi.json");
 const cubePoolAbi = require("./cubePoolAbi.json");
 
-const USDC = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const USDC = ADDRESS_CONSTANTS.USDC;
 const WBTC = "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599";
 const ETH = "0x0000000000000000000000000000000000000000";
 

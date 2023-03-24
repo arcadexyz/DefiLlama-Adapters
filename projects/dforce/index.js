@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
   const sdk = require('@defillama/sdk');
 
   const BigNumber = require('bignumber.js');
@@ -13,11 +14,11 @@
 /*==================================================
   Ethereum Settings
   ==================================================*/
-const DAI = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
+const DAI = ADDRESS_CONSTANTS.DAI;
 const PAX = "0x8E870D67F660D95d5be530380D0eC0bd388289E1";
 const TUSD = "0x0000000000085d4780B73119b644AE5ecd22b376";
-const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
-const USDT = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
+const USDC = ADDRESS_CONSTANTS.USDC;
+const USDT = ADDRESS_CONSTANTS.USDT;
 const USDx = "0xeb269732ab75A6fD61Ea60b06fE994cD32a83549";
 
 /*==================================================

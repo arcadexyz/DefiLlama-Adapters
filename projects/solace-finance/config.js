@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 module.exports = {
   ethereum: {
     solace: '0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40',
@@ -9,19 +10,19 @@ module.exports = {
         TokenTicker: "FRAX",
       },
       {
-        PoolToken: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        PoolToken: ADDRESS_CONSTANTS.USDC,
         TokenTicker: "USDC",
       },
       {
-        PoolToken: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        PoolToken: ADDRESS_CONSTANTS.USDT,
         TokenTicker: "USDT",
       },
       {
-        PoolToken: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        PoolToken: ADDRESS_CONSTANTS.DAI,
         TokenTicker: "DAI",
       },
       {
-        PoolToken: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        PoolToken: ADDRESS_CONSTANTS.WETH,
         TokenTicker: "WETH",
       },
       {

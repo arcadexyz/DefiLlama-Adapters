@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { staking } = require('../helper/staking')
 const { sumTokens } = require('../helper/unwrapLPs')
 
@@ -75,7 +76,7 @@ module.exports = {
         tvl:tvlArbitrum
     },
     ethereum:{
-        tvl: staking("0x54d59c4596c7ea66fd62188ba1e16db39e6f5472", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "ethereum"),
+        tvl: staking("0x54d59c4596c7ea66fd62188ba1e16db39e6f5472", ADDRESS_CONSTANTS.USDC, "ethereum"),
         staking: staking("0xcb9f85730f57732fc899fb158164b9ed60c77d49", "0x01ba67aac7f75f647d94220cc98fb30fcc5105bf", "ethereum")
     },
  hallmarks:[

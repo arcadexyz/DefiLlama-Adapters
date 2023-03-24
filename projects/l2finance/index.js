@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const { sumTokensAndLPsSharedOwners } = require('../helper/unwrapLPs')
 const abi = require('./abi.json')
@@ -23,10 +24,10 @@ async function tvl(timestamp, block, _, { api }){
         sdk.util.sumSingleBalance(balances, tokens.output[i].output, bal.output)
     })
     await sumTokensAndLPsSharedOwners(balances, [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", //usdc
-        "0x6b175474e89094c44da98b954eedeac495271d0f", //dai
+        ADDRESS_CONSTANTS.USDC, //usdc
+        ADDRESS_CONSTANTS.DAI, //dai
         "0x4fabb145d64652a948d72533023f6e7a623c7c53", //busd
-        "0xdac17f958d2ee523a2206206994597c13d831ec7", //usdt
+        ADDRESS_CONSTANTS.USDT, //usdt
     ].map(t=>[t,false]), [rollupChain], block)
     return balances
 }

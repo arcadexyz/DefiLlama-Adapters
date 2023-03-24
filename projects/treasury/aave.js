@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const treasuryContractsETH = [
@@ -31,15 +32,15 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [ 
         nullAddress,
-        '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
+        ADDRESS_CONSTANTS.USDC, // USDC
         '0xBcca60bB61934080951369a648Fb03DF4F96263C', // aUSDC
         '0xd24946147829DEaA935bE2aD85A3291dbf109c80', // ammUSDC
         '0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c', // aEthUSDC
-        '0x6B175474E89094C44Da98b954EedeAC495271d0F', // DAI
+        ADDRESS_CONSTANTS.DAI, // DAI
         '0x028171bca77440897b824ca71d1c56cac55b68a3', // aDAI
         '0x79bE75FFC64DD58e66787E4Eae470c8a1FD08ba4', // ammDAI
         '0x018008bfb33d285247A21d44E50697654f754e63', // aEthDAI
-        '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
+        ADDRESS_CONSTANTS.USDT, // USDT
         '0x3ed3b47dd13ec9a98b44e6204a523e766b225811', // aUSDT
         '0x17a79792Fe6fE5C95dFE95Fe3fCEE3CAf4fE4Cb7', // ammUSDT
         '0xFFC97d72E13E01096502Cb8Eb52dEe56f74DAD7B', // aAAVE
@@ -51,7 +52,7 @@ module.exports = treasuryExports({
         '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0', // wstETH
         '0x0B925eD163218f6662a35e0f0371Ac234f9E9371', // aEthwstETH
         '0xba100000625a3754423978a60c9317c58a424e3D', // BAL
-        '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+        ADDRESS_CONSTANTS.WETH, // WETH
         '0x030bA81f1c18d280636F32af80b9AAd02Cf0854e', // aWETH
         '0xf9Fb4AD91812b704Ba883B11d2B576E890a6730A', // ammWETH
         '0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8', // aEthWETH

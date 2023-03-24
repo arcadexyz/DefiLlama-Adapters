@@ -1,6 +1,7 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 
-const dai = '0x6b175474e89094c44da98b954eedeac495271d0f'
+const dai = ADDRESS_CONSTANTS.DAI
 const universe = '0x49244bd018ca9fd1f06ecc07b9e9de773246e5aa'
 const delegator = '0xd5524179cB7AE012f5B642C1D6D700Bbaa76B96b'
 

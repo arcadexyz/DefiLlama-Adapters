@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const {addFundsInMasterChef} = require("../helper/masterchef");
 const {pool2Exports} = require("../helper/pool2");
 const {staking} = require("../helper/staking")
@@ -16,7 +17,7 @@ async function tvl(timestamp, block, chainBlocks) {
     await addFundsInMasterChef(balances, masterchef, chainBlocks.fantom, "fantom", addr=>{
         addr = addr.toLowerCase();
         if (addr === "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e") {
-            return "0x6b175474e89094c44da98b954eedeac495271d0f"
+            return ADDRESS_CONSTANTS.DAI
         }
         return `fantom:${addr}`
     }, undefined, ignore);

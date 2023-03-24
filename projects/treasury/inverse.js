@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { treasuryExports, nullAddress } = require("../helper/treasury");
 
 const inv = "0x41D5D79431A913C4aE7d69a668ecdfE5fF9DFB68";
@@ -10,11 +11,11 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [
       nullAddress,
-      "0x6B175474E89094C44Da98b954EedeAC495271d0F", // DAI
-      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+      ADDRESS_CONSTANTS.DAI, // DAI
+      ADDRESS_CONSTANTS.USDC, // USDC
       "0x865377367054516e17014CcdED1e7d814EDC9ce4", // DOLA
       "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", // WBTC
-      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", // WETH
+      ADDRESS_CONSTANTS.WETH, // WETH
       "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e", // YFI
       "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF", // AURA
       "0xba100000625a3754423978a60c9317c58a424e3D", // BAL

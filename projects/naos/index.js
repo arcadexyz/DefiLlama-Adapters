@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { staking, stakings } = require("../helper/staking");
 const { pool2 } = require("../helper/pool2");
@@ -42,7 +43,7 @@ const UNI_ETH_NAOS_LP_ADDRESS = "0x9b577e849b128ee1a69144b218e809b8bb98c35d";
 const NAOS_ADDRESS = "0x4a615bb7166210cce20e6642a6f8fb5d4d044496";
 const NUSD_3CRV_LP_ADDRESS = "0x67d9eAe741944D4402eB0D1cB3bC3a168EC1764c";
 
-const DAI_CONTRACT_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f";
+const DAI_CONTRACT_ADDRESS = ADDRESS_CONSTANTS.DAI;
 const DAI_CONTRACT_HOLDER = [
   "0x9Ddceb30515eD297C1B72Ff8F848F254104b7A12", // Formation
   "0x3ED6355Ad74605c0b09415d6B0b29a294Fd31265", // Transmuter

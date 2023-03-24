@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const abi = require("./abi.json");
 const { sumTokens2 } = require('../helper/unwrapLPs')
 const { staking } = require('../helper/staking')
@@ -16,7 +17,7 @@ const factory = "0x90183C741CC13195884B6E332Aa0ac1F7c1E67Fa";
 
 const usdTokens = {
   bsc: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-  ethereum: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+  ethereum: ADDRESS_CONSTANTS.USDT,
   arbitrum: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
   avax: '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664',
 }

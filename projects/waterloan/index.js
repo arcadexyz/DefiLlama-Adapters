@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { getV2Reserves, getTvl, getBorrowed } = require("../helper/aave");
 
 const addressesProviderRegistry = {
@@ -47,9 +48,9 @@ function waterloan(chain, borrowed) {
       "0x1D7C98750A47762FA8B45c6E3744aC6704F44698":
         "0x2731d151CBDf84A8A4C6d9D0BaE74012Db51E428", // IFT
       "0x398dcA951cD4fc18264d995DCD171aa5dEbDa129":
-        "0xdac17f958d2ee523a2206206994597c13d831ec7", // USDT
+        ADDRESS_CONSTANTS.USDT, // USDT
       "0xF335B2440e62A953a42865aDf7bD73F4C6671A7b":
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+        ADDRESS_CONSTANTS.USDC, // USDC
       "0x9F4165009e93b7f5BA61A477ad08Cd3D1aD8aa36":
         "0x0b342c51d1592c41068d5d4b4da4a68c0a04d5a4", // ONES
 

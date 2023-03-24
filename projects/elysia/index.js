@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { stakings } = require("../helper/staking");
 const { sumTokensExport,  } = require('../helper/unwrapLPs')
@@ -6,10 +7,10 @@ const addresses = {
   elfi: "0x4da34f8264cb33a5c9f17081b9ef5ff6091116f4",
   el: "0x2781246fe707bb15cee3e5ea354e2154a2877b16",
   elStaking: "0x3F0c3E32bB166901AcD0Abc9452a3f0c5b8B2C9D",
-  dai: "0x6b175474e89094c44da98b954eedeac495271d0f",
-  usdt: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  dai: ADDRESS_CONSTANTS.DAI,
+  usdt: ADDRESS_CONSTANTS.USDT,
   busd: "0x4fabb145d64652a948d72533023f6e7a623c7c53",
-  usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  usdc: ADDRESS_CONSTANTS.USDC,
   elfiStaking: [
     "0xb41bcd480fbd986331eeed516c52e447b50dacb4",
     "0xCD668B44C7Cf3B63722D5cE5F655De68dD8f2750",

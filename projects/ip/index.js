@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const { sumTokens2 } = require('../helper/unwrapLPs')
 const {lendingMarket} = require('../helper/methodologies')
@@ -55,7 +56,7 @@ async function tvl(_, _b, _cb, { api, }) {
       sdk.util.sumSingleBalance(balances,token,vault.tokenBalances[i])
     })
   })
-  return sumTokens2({ api, balances, owner: '0x2A54bA2964C8Cd459Dc568853F79813a60761B58', tokens: ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48']})
+  return sumTokens2({ api, balances, owner: '0x2A54bA2964C8Cd459Dc568853F79813a60761B58', tokens: [ADDRESS_CONSTANTS.USDC]})
 }
 
 module.exports = {

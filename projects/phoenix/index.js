@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const BigNumber = require('bignumber.js');
 
@@ -8,7 +9,7 @@ const bscpool = '0xBB8dA4ed33388A0eAc442eD1f28474413FC9d7a7';
 const wanpool = '0xBB8dA4ed33388A0eAc442eD1f28474413FC9d7a7';
 
 //const wanOptionFactorySc = new wanWeb3.eth.Contract(optionFactoryAbi,wanOptionFactory);
-let usd = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+let usd = ADDRESS_CONSTANTS.USDC;
 
 async function polygon(timestamp, _, {polygon: block }) {
   let totalSupply = (await sdk.api.abi.call({

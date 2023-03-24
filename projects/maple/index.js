@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { sumTokens2 } = require("../helper/unwrapLPs");
 const { staking, } = require("../helper/staking")
@@ -6,7 +7,7 @@ const { PublicKey } = require('@solana/web3.js')
 const { getLogs } = require('../helper/cache/getLogs')
 
 const MapleTreasury = "0xa9466EaBd096449d650D5AEB0dD3dA6F52FD0B19";
-const USDC = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const USDC = ADDRESS_CONSTANTS.USDC;
 const chain = 'ethereum'
 
 /*** Solana TVL Portions ***/

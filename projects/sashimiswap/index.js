@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const {uniTvlExport} = require("../helper/calculateUniTvl");
 const { compoundExports } = require("../helper/compound");
@@ -6,7 +7,7 @@ const { staking } = require("../helper/staking");
 const factoryETH = "0xF028F723ED1D0fE01cC59973C49298AA95c57472";
 const comprollerETH = "0xB5d53eC97Bed54fe4c2b77f275025c3fc132D770";
 const sIETH = "0xC597F86424EEb6599Ea40f999DBB739e3Aca5d82";
-const WETHEquivalent = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+const WETHEquivalent = ADDRESS_CONSTANTS.WETH;
 
 const factoryBSC = "0x1DaeD74ed1dD7C9Dabbe51361ac90A69d851234D";
 const comprollerBSC = "0x88fEf82FDf75E32e4BC0e662d67CfcEF4838F026";

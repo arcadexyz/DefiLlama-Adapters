@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 
 async function tvl(timestamp, ethBlock, { arbitrum: block }) {
@@ -67,7 +68,7 @@ async function tvl(timestamp, ethBlock, { arbitrum: block }) {
   for (let i = 0; i < equity.length; i++) {
     sdk.util.sumSingleBalance(
       balances,
-      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      ADDRESS_CONSTANTS.WETH,
       equity[i].output - borrows[i].output
     );
   }

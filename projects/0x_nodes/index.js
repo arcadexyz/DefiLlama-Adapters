@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { GraphQLClient, gql } = require('graphql-request')
 const { getBlock } = require('../helper/http')
 const { staking } = require('../helper/staking')
@@ -6,7 +7,7 @@ const sdk = require('@defillama/sdk')
 const CONFIG = {
   ethereum: {
     uri: 'https://api.thegraph.com/subgraphs/name/0xnodes/system11',
-    strategy_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', //wETH
+    strategy_token: ADDRESS_CONSTANTS.WETH, //wETH
     bios_token: '0xAACa86B876ca011844b5798ECA7a67591A9743C8',
     kernel_addr: '0xcfcff4eb4799cda732e5b27c3a36a9ce82dbabe0'
   },

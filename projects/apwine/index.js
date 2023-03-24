@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk")
 const abi = require("./abi.json")
 const {sumTokens} = require("../helper/unwrapLPs.js")
@@ -12,7 +13,7 @@ const AMMregistry = '0x6646A35e74e35585B0B02e5190445A324E5D4D01'
 const transformMapping_ethereum = {
   '0xaC14864ce5A98aF3248Ffbf549441b04421247D3': '0x73968b9a57c6e53d41345fd57a6e6ae27d6cdb2f', // xSDT -> SDT
   '0x6b1D394Ca67fDB9C90BBd26FE692DdA4F4f53ECD': '0xcafe001067cdef266afb7eb5a286dcfd277f3de5', // sPSP_PP4 -> PSP
-  '0xA991356d261fbaF194463aF6DF8f0464F8f1c742': '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // tfUSDC -> USDC
+  '0xA991356d261fbaF194463aF6DF8f0464F8f1c742': ADDRESS_CONSTANTS.USDC, // tfUSDC -> USDC
   '0x24E79e946dEa5482212c38aaB2D0782F04cdB0E0': '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9', // palStkAave -> AAVE
 }
 const transformMapping_polygon = {

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { Program } = require("@project-serum/anchor");
 const { getProvider, sumTokens2, getTokenBalance, } = require("../helper/solana");
 const sdk = require('@defillama/sdk')
@@ -49,7 +50,7 @@ async function getProducts() {
 
 async function getMMbalance() {
   const { output: bals } = await sdk.api.abi.multiCall({
-    target: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    target: ADDRESS_CONSTANTS.USDC,
     abi: 'erc20:balanceOf',
     calls: MM_multisigs.map(i => ({ params: i})),
   })

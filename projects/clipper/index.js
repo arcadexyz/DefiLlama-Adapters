@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokensAndLPsSharedOwners } = require('../helper/unwrapLPs')
 const { getChainTransform } = require('../helper/portedTokens')
 const sdk = require('@defillama/sdk')
@@ -16,7 +17,7 @@ const chainConfig = {
 	optimism: { chainId: 10, },
 	arbitrum: { chainId: 42161, },
 }
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+const weth = ADDRESS_CONSTANTS.WETH
 const moonbeamGLMR = "moonbeam:0x0000000000000000000000000000000000000802"
 
 async function getChainData(chain) {

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { chainExports } = require("../helper/exports");
 const { sumTokens } = require("../helper/unwrapLPs");
 const { getFixBalances } = require('../helper/portedTokens')
@@ -91,7 +92,7 @@ const liquidityBridgeTokens = [
     aurora: "0x4988a896b1227218e4A686fdE5EabdcAbd91571f",
     avax: "0xc7198437980c041c805A1EDcbA50c1Ce5db95118",
     bsc: "0x55d398326f99059ff775485246999027b3197955",
-    ethereum: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    ethereum: ADDRESS_CONSTANTS.USDT,
     fantom: "0x049d68029688eabf473097a2fc38ef61633a3c7a",
     heco: "0xa71edc38d189767582c38a3145b5873052c3e47a",
     okexchain: "0x382bb369d343125bfb2117af9c149795c6c65c50",
@@ -106,7 +107,7 @@ const liquidityBridgeTokens = [
     avax: "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
     boba: "0x66a2A913e447d6b4BF33EFbec43aAeF87890FBbc",
     bsc: "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-    ethereum: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    ethereum: ADDRESS_CONSTANTS.USDC,
     fantom: "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
     harmony: "0x985458e523db3d53125813ed68c274899e9dfab4",
     heco: "0x9362bbef4b8313a8aa9f0c9808b80577aa26b73b",
@@ -124,7 +125,7 @@ const liquidityBridgeTokens = [
     // DAI
     avax: "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
     bsc: "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-    ethereum: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    ethereum: ADDRESS_CONSTANTS.DAI,
     optimism: "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
     polygon: "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
   },
@@ -133,7 +134,7 @@ const liquidityBridgeTokens = [
     arbitrum: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
     avax: "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB",
     bsc: "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
-    ethereum: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    ethereum: ADDRESS_CONSTANTS.WETH,
     fantom: "0x74b23882a30290451A17c44f4F05243b6b58C76d",
     optimism: "0x4200000000000000000000000000000000000006",
     polygon: "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",

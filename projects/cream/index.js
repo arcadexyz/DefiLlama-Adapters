@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const utils = require("../helper/utils");
 const { unwrapUniswapLPs, nullAddress } = require("../helper/unwrapLPs");
@@ -10,7 +11,7 @@ const abiCereth2 = require("./creth2.json");
 const BigNumber = require("bignumber.js");
 
 //
-const wETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+const wETH = ADDRESS_CONSTANTS.WETH;
 const CRETH2 = "0xcBc1065255cBc3aB41a6868c22d1f1C573AB89fd";
 const crvIB = "0x27b7b1ad7288079A66d12350c828D3C00A6F07d7";
 

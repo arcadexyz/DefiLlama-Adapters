@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { unwrapUniswapLPs, sumTokens2 } = require("../helper/unwrapLPs");
 
@@ -46,7 +47,7 @@ const ethPools = [
   }, // WBTC
   {
     pool: "0xde846827cE3022EcD5eFD6ed316a2dEf9AB299B8",
-    token: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    token: ADDRESS_CONSTANTS.WETH,
   }, // WETH
 ];
 

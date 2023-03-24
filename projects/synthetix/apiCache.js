@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const BigNumber = require('bignumber.js');
 const abi = require('./abi.json');
@@ -32,7 +33,7 @@ const snxGraphEndpoints = {
   optimism: 'https://api.thegraph.com/subgraphs/name/0xngmi/snx-lite-optimism-regenesis'
 }
 const ethStaking = "0xc1aae9d18bbe386b102435a8632c8063d31e747c"
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+const weth = ADDRESS_CONSTANTS.WETH
 
 function chainTvl(chain) {
   return async (timestamp, ethBlock, chainBlocks) => {

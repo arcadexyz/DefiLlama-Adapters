@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { pool2s } = require("../helper/pool2");
 const { stakings } = require("../helper/staking");
 const { sumTokens, sumTokensExport, nullAddress } = require("../helper/unwrapLPs");
@@ -56,8 +57,8 @@ module.exports = {
   ethereum: {
     tvl: sumTokensExport({ owner: '0xb40EEd68d7d6B3b6d6f4E93DE6239B7C53EFc786', tokens: [
       nullAddress,
-      '0xdac17f958d2ee523a2206206994597c13d831ec7',
-      '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+      ADDRESS_CONSTANTS.USDT,
+      ADDRESS_CONSTANTS.USDC,
       '0x4fabb145d64652a948d72533023f6e7a623c7c53',
       '0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9',
     ]})

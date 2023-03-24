@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const addresses = {
   boba: {
     treasury: "0x559dBda9Eb1E02c0235E245D9B175eb8DcC08398",
@@ -16,7 +17,7 @@ const addresses = {
   },
   ethereum: {
     treasury: "0x47BbF992a25B7fe1D532F8128D514524462731eF",
-    USDC: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    USDC: ADDRESS_CONSTANTS.USDC,
   }
 };
 

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { sumTokensSharedOwners} = require("../helper/unwrapLPs");
 const { staking } = require("../helper/staking");
@@ -25,9 +26,9 @@ const ethVaults = [
 ]
 
 const ethCollaterals = [
-  "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", // WETH
-  "0x6B175474E89094C44Da98b954EedeAC495271d0F", // DAI
-  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+  ADDRESS_CONSTANTS.WETH, // WETH
+  ADDRESS_CONSTANTS.DAI, // DAI
+  ADDRESS_CONSTANTS.USDC, // USDC
   "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", // WBTC
 ]
 
@@ -61,7 +62,7 @@ async function optTvl(timestamp, block, chainBlocks) {
 
 const treasuryAddress = "0xa54074b2cc0e96a43048d4a68472F7F046aC0DA8";
 const treasuryContents = [
-  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+  ADDRESS_CONSTANTS.USDC
 ]
 const optTreasury = "0x271901c3268D0959bbc9543DE4f073D3708C88F7";
 
@@ -71,7 +72,7 @@ async function treasury(timestamp, block) {
     target: treasuryAddress,
     block,
   })).output;
-  sdk.util.sumSingleBalance(balances, "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", ethBal);
+  sdk.util.sumSingleBalance(balances, ADDRESS_CONSTANTS.WETH, ethBal);
   await sumTokensSharedOwners(balances, treasuryContents, [treasuryAddress], block);
   return balances;
 }

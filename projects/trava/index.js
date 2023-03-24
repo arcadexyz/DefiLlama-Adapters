@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const { default: BigNumber } = require('bignumber.js');
 const abi = require('./abi.json');
@@ -90,9 +91,9 @@ async function getTVL(block, chain, tTokenList) {
             // aave dont have bsc address on coingecko
             addressToAdd = "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"
         } else if (tTokenList[i].reserve == "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E" && chain == "fantom"){
-            addressToAdd = "0x6b175474e89094c44da98b954eedeac495271d0f"
+            addressToAdd = ADDRESS_CONSTANTS.DAI
         } else if (tTokenList[i].reserve == "0x049d68029688eAbF473097a2fC38ef61633A3C7A" && chain == "fantom"){
-            addressToAdd = "0xdac17f958d2ee523a2206206994597c13d831ec7"
+            addressToAdd = ADDRESS_CONSTANTS.USDT
         }
         else {
             addressToAdd = chain + ":" + tTokenList[i].reserve

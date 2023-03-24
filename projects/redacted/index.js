@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokensAndLPsSharedOwners, unwrapUniswapV3NFTs, genericUnwrapCvx } = require('../helper/unwrapLPs')
 const sdk = require('@defillama/sdk')
 const { BigNumber } = require('ethers')
@@ -38,7 +39,7 @@ async function tvl(timestamp, block, chainBlocks){
         // BTRFLY/ETH Curve LP
         ['0x7483Dd57f6488b0e194A151C57Df6Ec85C00aCE9', false],
         // USDC
-        ['0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', false],
+        [ADDRESS_CONSTANTS.USDC, false],
         // FRAX
         ['0x853d955aCEf822Db058eb8505911ED77F175b99e', false],
     ], treasuries, block)

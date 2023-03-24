@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens2 } = require('../helper/unwrapLPs')
 
 const ring = {
@@ -7,7 +8,7 @@ const ring = {
   "crab": "0x7399Ea6C9d35124d893B8d9808930e9d3F211501",
 }
 const weth = {
-  "ethereum": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "ethereum": ADDRESS_CONSTANTS.WETH,
   "heco": "0x5545153CCFcA01fbd7Dd11C0b23ba694D9509A6F",
   "polygon": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
   "crab": "0x2D2b97EA380b0185e9fDF8271d1AFB5d2Bf18329",

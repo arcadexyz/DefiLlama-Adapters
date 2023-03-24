@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
 const { staking } = require("../helper/staking");
@@ -37,9 +38,9 @@ const pauserAvax = "0xf08d6a9c2C5a2Dc9B8645c5Ac0b529D4046D19aa";
 const rearnUSDC = "0x84c2b16FA6877a8fF4F3271db7ea837233DFd6f0";
 
 // Ethereum Assets
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const weth = ADDRESS_CONSTANTS.WETH;
 const wbtc = "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599";
-const usdc = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
+const usdc = ADDRESS_CONSTANTS.USDC;
 const aave = "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9";
 const perp = "0xbC396689893D065F41bc2C6EcbeE5e0085233447";
 const ape = "0x4d224452801ACEd8B2F0aebE155379bb5D594381";

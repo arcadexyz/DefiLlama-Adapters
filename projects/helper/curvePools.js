@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 module.exports = {
   // Curve.fi Factory USD Metapool: moUSD 
   '0x162b21ba1a90dd9384c615192fa4053217d2a8db': {
@@ -46,7 +47,7 @@ module.exports = {
   },
   '0x6c3f90f043a72fa612cbac8115ee7e52bde6e490': {
     swapContract: '0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7',
-    underlyingTokens: ['0xdac17f958d2ee523a2206206994597c13d831ec7', '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', '0x6b175474e89094c44da98b954eedeac495271d0f'],
+    underlyingTokens: [ADDRESS_CONSTANTS.USDT, ADDRESS_CONSTANTS.USDC, ADDRESS_CONSTANTS.DAI],
   },
   '0x075b1bb99792c9e1041ba13afef80c91a1e70fb3': {
     swapContract: '0x7fC77b5c7614E1533320Ea6DDc2Eb61fa00A9714',
@@ -124,9 +125,9 @@ module.exports = {
   '0xc25a3a3b969415c80451098fa907ec722572917f': {
     swapContract: '0xA5407eAE9Ba41422680e2e00537571bcC53efBfD',
     underlyingTokens: [
-      '0xdac17f958d2ee523a2206206994597c13d831ec7',
-      '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-      '0x6b175474e89094c44da98b954eedeac495271d0f',
+      ADDRESS_CONSTANTS.USDT,
+      ADDRESS_CONSTANTS.USDC,
+      ADDRESS_CONSTANTS.DAI,
       '0x57ab1ec28d129707052df4df418d58a2d46d5f51'
     ]
   },

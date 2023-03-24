@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const { ohmTvl } = require('../helper/ohm')
 const { uniTvlExport } = require('../helper/calculateUniTvl');
@@ -10,7 +11,7 @@ const etherAddress = '0x0000000000000000000000000000000000000000'
 const cnv_token = '0x000000007a58f5f58e697e51ab0357bc9e260a04'
 const stakingAddress = '0x0000000000000000000000000000000000000000'
 const treasuryTokens = [
-    ['0x6b175474e89094c44da98b954eedeac495271d0f', false], //DAI
+    [ADDRESS_CONSTANTS.DAI, false], //DAI
     // ['0x0ab87046fBb341D058F17CBC4c1133F25a20a52f', false], //gOHM
 ]
 const gemSwap_factory = '0x066a5cb7ddc6d55384e2f6ca13d5dd2cd2685cbd'

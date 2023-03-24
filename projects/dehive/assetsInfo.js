@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 // Auto generated at 9-2-2022 16:14
 module.exports = {
   'ethereum' : [
@@ -16,7 +17,7 @@ module.exports = {
         dhvToken: '0x62Dc4817588d53a056cBbD18231d91ffCcd34b2A',
         underlying: [
           '0x62Dc4817588d53a056cBbD18231d91ffCcd34b2A', // DHV
-          '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // WETH
+          ADDRESS_CONSTANTS.WETH, // WETH
         ],
         isPool2: true,
         poolId: 0

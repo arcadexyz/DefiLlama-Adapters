@@ -1,8 +1,9 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const {ohmTvl} = require('../helper/ohm')
 
 const transforms = {
-    "0xf74195bb8a5cf652411867c5c2c5b8c2a402be35": "0x6b175474e89094c44da98b954eedeac495271d0f",
-    "0x66a2a913e447d6b4bf33efbec43aaef87890fbbc": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "0xf74195bb8a5cf652411867c5c2c5b8c2a402be35": ADDRESS_CONSTANTS.DAI,
+    "0x66a2a913e447d6b4bf33efbec43aaef87890fbbc": ADDRESS_CONSTANTS.USDC,
 }
 
 module.exports={

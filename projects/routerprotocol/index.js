@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const { sumTokens2, nullAddress, } = require('../helper/unwrapLPs')
 const NATIVE_ADDRESS = "NATIVE";
@@ -65,14 +66,14 @@ const config = {
   ethereum: {
     contractAddress: "0x6e14f48576265272B6CAA3A7cC500a26050Be64E",
     tokens: [
-      { name: "usd-coin", address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", decimals: 6 },
+      { name: "usd-coin", address: ADDRESS_CONSTANTS.USDC, decimals: 6 },
       { name: "route", address: "0x16ECCfDbb4eE1A85A33f3A9B21175Cd7Ae753dB4", decimals: 18 },
       { name: "wmatic", address: "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0", decimals: 18 },
       { name: "dfyn-network", address: "0x9695e0114e12C0d3A3636fAb5A18e6b737529023", decimals: 18 },
       { name: "wbnb", address: "0xB8c77482e45F1F44dE1745F52C74426C631bDD52", decimals: 18 },
       { name: "avalanche-wormhole", address: "0x85f138bfEE4ef8e540890CFb48F620571d67Eda3", decimals: 18 },
       { name: "fantom", address: "0x4E15361FD6b4BB609Fa63C81A2be19d873717870", decimals: 18 },
-      { name: "weth", address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", decimals: 18 },
+      { name: "weth", address: ADDRESS_CONSTANTS.WETH, decimals: 18 },
       { name: "wrapped-cro", address: "0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b", decimals: 18 },
     ]
   },

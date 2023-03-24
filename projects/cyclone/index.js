@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const contracts = require("./contracts.json");
 const { pool2 } = require("./../helper/pool2");
 const { staking } = require(".././helper/staking.js");
@@ -52,7 +53,7 @@ module.exports = {
     ),
   },
   ethereum: {
-    tvl: tvl("ethereum", "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"),
+    tvl: tvl("ethereum", ADDRESS_CONSTANTS.WETH),
     pool2: pool2(
       contracts.ethereum.pool2.address,
       contracts.ethereum.pool2.token,

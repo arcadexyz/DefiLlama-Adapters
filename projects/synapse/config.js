@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 module.exports = {
   ethereum: {
     tvl: {
@@ -5,9 +6,9 @@ module.exports = {
         {
           pool: '0x1116898dda4015ed8ddefb84b6e8bc24528af2d8',
           tokens: [
-            "0x6b175474e89094c44da98b954eedeac495271d0f", // DAI
-            "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
-            "0xdac17f958d2ee523a2206206994597c13d831ec7", // USDT
+            ADDRESS_CONSTANTS.DAI, // DAI
+            ADDRESS_CONSTANTS.USDC, // USDC
+            ADDRESS_CONSTANTS.USDT, // USDT
           ]
         },
       ],
@@ -15,16 +16,16 @@ module.exports = {
         address: '0x2796317b0fF8538F253012862c06787Adfb8cEb6',
         tokens: [
           '0x98585dfc8d9e7d48f0b1ae47ce33332cf4237d96', // NEWO
-          '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // WETH
+          ADDRESS_CONSTANTS.WETH, // WETH
           '0x0ab87046fBb341D058F17CBC4c1133F25a20a52f', // gOHM
           '0x71ab77b7dbb4fa7e017bc15090b2163221420282', // HIGH
           '0x853d955acef822db058eb8505911ed77f175b99e', // FRAX
           '0xbaac2b4491727d78d2b78815144570b9f2fe8899', // DOG
           '0x73968b9a57c6e53d41345fd57a6e6ae27d6cdb2f', // SDT
-          '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
-          '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
+          ADDRESS_CONSTANTS.USDC, // USDC
+          ADDRESS_CONSTANTS.USDT, // USDT
           '0xb753428af26e81097e7fd17f40c88aaa3e04902c', // SFI
-          '0x6B175474E89094C44Da98b954EedeAC495271d0F', // DAI
+          ADDRESS_CONSTANTS.DAI, // DAI
           '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', // wBTC
           '0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8', // agEUR
           '0x0642026E7f0B6cCaC5925b4E7Fa61384250e1701', // H2O

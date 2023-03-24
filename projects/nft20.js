@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const sdk = require("@defillama/sdk")
 const axios = require("axios")
 const { staking } = require("./helper/staking");
@@ -20,7 +21,7 @@ const contracts = {
       '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // univ2_factory_ethereum, 
       '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac' // sushiv1_factory_ethereum
     ],
-    weth: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+    weth: ADDRESS_CONSTANTS.WETH,
     univ3_factory: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
     transform: addr => addr,
   }, 

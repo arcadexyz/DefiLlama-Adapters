@@ -1,10 +1,11 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { tokenHolderBalances } = require('../helper/tokenholders')
 
 module.exports = {
     ethereum: {
         tvl: tokenHolderBalances([
             {
-                tokens: ['0xdac17f958d2ee523a2206206994597c13d831ec7' /*USDT*/, '0x6b175474e89094c44da98b954eedeac495271d0f'/*DAI*/],
+                tokens: [ADDRESS_CONSTANTS.USDT /*USDT*/, ADDRESS_CONSTANTS.DAI/*DAI*/],
                 holders: '0xb942ca22e0eb0f2524F53f999aE33fD3B2D58E3E',      // Strategy controller contract
                 checkETHBalance: true,
             },
@@ -13,7 +14,7 @@ module.exports = {
                 holders: '0x0BCbAb2FeCC30B7341132B4Ebb36d352E035f1bD',      // Wallet strategy contract with user funds deposited in Compound
             },
             {
-                tokens: ['0x6b175474e89094c44da98b954eedeac495271d0f' /*DAI*/],
+                tokens: [ADDRESS_CONSTANTS.DAI /*DAI*/],
                 holders: '0x65D4853d663CeE114A0aA1c946E95479C53e78c2',      // user rewards in DAI token
             }]
         ),

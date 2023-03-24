@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 /*==================================================
   Modules
   ==================================================*/
@@ -21,8 +22,8 @@ const alkTokens = [
   '0x8125afd067094cD573255f82795339b9fe2A40ab', // WETH, Alkemi Earn Open
   '0x1f52453B32BFab737247114D56d756A6c37dd9Ef', // WETH, Alkemi Earn
   '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', // WBTC
-  '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F', // DAI
+  ADDRESS_CONSTANTS.USDC, // USDC
+  ADDRESS_CONSTANTS.DAI, // DAI
 ];
 
 async function tvl(timestamp, block) {
