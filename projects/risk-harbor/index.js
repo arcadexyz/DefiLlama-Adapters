@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const {
   queryV1Beta1,
@@ -16,23 +17,23 @@ const networks = {
     vaults: [
       // [underwritingAsset, vaultAddress]
       [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        ADDRESS_CONSTANTS.USDC,
         "0x83944C256e5C057A246aE1b1945934440eb35Af6",
       ],
       [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        ADDRESS_CONSTANTS.USDC,
         "0x8D999a2f262FfDA47A734B987D1A15bc984e45Be",
       ],
       [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        ADDRESS_CONSTANTS.USDC,
         "0x0881Ec8e0e743906E1c1dFeE8Ae12BfDc0611b24",
       ],
       [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        ADDRESS_CONSTANTS.USDC,
         "0x8529687adD661120C9E23E366Cc7F545f1A03ADf",
       ],
       [
-        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        ADDRESS_CONSTANTS.USDC,
         "0x61635d1De721DD1DB35f8aCFD0f1ea367dF65671",
       ],
     ],

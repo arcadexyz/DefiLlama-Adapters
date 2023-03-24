@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { token } = require("@project-serum/anchor/dist/cjs/utils");
 const { sumTokens } = require("../helper/unwrapLPs");
@@ -12,8 +13,8 @@ const poolsV8888 = {
 const tokens = {
   ETH: "0x0000000000000000000000000000000000000000",
   WBTC: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-  WETH: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-  USDC: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  WETH: ADDRESS_CONSTANTS.WETH,
+  USDC: ADDRESS_CONSTANTS.USDC,
   HEGIC: "0x584bc13c7d411c00c01a62e8019472de68768430",
 };
 

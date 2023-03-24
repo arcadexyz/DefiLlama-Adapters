@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const DEC_18 = 10 ** 18;
 const xaaveaAddr = "0x80DC468671316E50D4E9023D3db38D3105c1C146";
 const xaavebAddr = "0x704De5696dF237c5B9ba0De9ba7e0C63dA8eA0Df";
@@ -25,10 +26,10 @@ const bntAddr = "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C";
 const kncAddr = "0xdd974d5c2e2928dea5f71b9825b8b646686bd200";
 const snxAddr = "0xDC01020857afbaE65224CfCeDb265d1216064c59";
 const wbtcAddr = "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599";
-const wethAddr = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const wethAddr = ADDRESS_CONSTANTS.WETH;
 const snxTokenAddr = "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f";
 const inchAddr = "0x111111111117dc0aa78b770fa6a738034120c302";
-const usdcAddr = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const usdcAddr = ADDRESS_CONSTANTS.USDC;
 const aaveAddr = "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9";
 const xtkAddress = "0x7F3EDcdD180Dbe4819Bd98FeE8929b5cEdB3AdEB";
 
@@ -46,7 +47,7 @@ const WETH = "weth";
 const QUOTER_ADDRESS = '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6'
 const usdcAddress = '0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8'
 const wethAddress = '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1'
-const usdtAddress = '0xdac17f958d2ee523a2206206994597c13d831ec7';
+const usdtAddress = ADDRESS_CONSTANTS.USDT;
 const COINGECKO_API_URL = 'https://api.coingecko.com/api/v3/coins';
 const urls = {
     "mainnet": "https://api.thegraph.com/subgraphs/name/xtokenmarket/terminal-mainnet",

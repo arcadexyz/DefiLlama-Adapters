@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
 
@@ -22,7 +23,7 @@ const constant = {
 };
 
 async function purchase(block) {
-  let weth = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2';
+  let weth = ADDRESS_CONSTANTS.WETH;
   let _purchasePool;
   const [surplus, treasury] = await Promise.all([
     sdk.api.abi.call({

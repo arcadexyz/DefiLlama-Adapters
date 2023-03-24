@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const BigNumber = require("bignumber.js");
 const {staking} = require("../helper/staking");
@@ -7,10 +8,10 @@ const ethStakingPool = "0x79876b5062160C107e02826371dD33c047CCF2de";
 
 const translateToken = {
     '0xFe7ed09C4956f7cdb54eC4ffCB9818Db2D7025b8': "0x1456688345527be1f37e9e627da0837d6f08c925",
-    '0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC': "0x6b175474e89094c44da98b954eedeac495271d0f",
+    '0xFc8B2690F66B46fEC8B3ceeb95fF4Ac35a0054BC': ADDRESS_CONSTANTS.DAI,
     '0xDACD011A71f8c9619642bf482f1D4CeB338cfFCf': "0x1456688345527be1f37e9e627da0837d6f08c925",
     '0x3129aC70c738D398d1D74c87EAB9483FD56D16f8': "0x1456688345527be1f37e9e627da0837d6f08c925",
-    '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E': "0x6b175474e89094c44da98b954eedeac495271d0f",
+    '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E': ADDRESS_CONSTANTS.DAI,
     '0x82f0B8B456c1A451378467398982d4834b6829c1': "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3"
 }
 
@@ -19,8 +20,8 @@ const ethPools = [
     {
         token: "0x49519631B404E06ca79C9C7b0dC91648D86F08db",
         underlying: [
-            "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-            "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            ADDRESS_CONSTANTS.USDT,
+            ADDRESS_CONSTANTS.USDC,
             "0x1456688345527bE1f37E9e627DA0837D6f08C925"
         ]
     },
@@ -28,7 +29,7 @@ const ethPools = [
         token: "0x6477960dd932d29518D7e8087d5Ea3D11E606068",
         underlying: [
             "0x1456688345527bE1f37E9e627DA0837D6f08C925",
-            "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+            ADDRESS_CONSTANTS.DAI,
             "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51"
         ]
     }

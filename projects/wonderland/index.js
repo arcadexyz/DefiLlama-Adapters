@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { stakings } = require("../helper/staking");
 const { sumTokensAndLPsSharedOwners } = require("../helper/unwrapLPs");
 const sdk = require("@defillama/sdk");
@@ -14,7 +15,7 @@ async function avaxTvl(timestamp, ethBlock, chainBlocks) {
   const balances = {};
   const transform = (addr) =>
     addr.toLowerCase() === "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7"
-      ? "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      ? ADDRESS_CONSTANTS.USDT
       : `avax:${addr}`;
 
   await sumTokensAndLPsSharedOwners(
@@ -63,8 +64,8 @@ async function ethTvl(timestamp, ethBlock, chainBlocks) {
       ["0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6", false], // STG
       ["0x6243d8CEA23066d098a15582d81a598b4e8391F4", false], // FLX
       ["0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F", false], // SNX
-      ["0xdAC17F958D2ee523a2206206994597C13D831ec7", false], // USDT
-      ["0x6B175474E89094C44Da98b954EedeAC495271d0F", false], // DAI
+      [ADDRESS_CONSTANTS.USDT, false], // USDT
+      [ADDRESS_CONSTANTS.DAI, false], // DAI
     ],
     [Treasury_Eth],
     ethBlock,

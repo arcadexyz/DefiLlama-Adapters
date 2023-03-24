@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens2, nullAddress, } = require('../helper/unwrapLPs')
 
 const ethSSIPEth = '0x29B4b8674D93b36Bf651d0b86A8e5bE3c378aCF4'
@@ -8,8 +9,8 @@ const config = {
     uToken: '0x474021845c4643113458ea4414bdb7fb74a01a77',
     tokensAndOwners: [
       [nullAddress, ethSSIPEth],
-      ['0xdac17f958d2ee523a2206206994597c13d831ec7', '0x920d510d5c70c01989b66f4e24687dddb988ddae'],
-      ['0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', '0xfdfaa453ef3709d2c26ecf43786a14ab8bf27e36'],
+      [ADDRESS_CONSTANTS.USDT, '0x920d510d5c70c01989b66f4e24687dddb988ddae'],
+      [ADDRESS_CONSTANTS.USDC, '0xfdfaa453ef3709d2c26ecf43786a14ab8bf27e36'],
     ],
     pools: [
       '0x1eECc8C8298ed9Bd46c147D44E2D7A7BfACE2034', // UNO SSRP

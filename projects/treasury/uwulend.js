@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const treasury = "0xc671a6b1415de6549b05775ee4156074731190c6";
@@ -7,8 +8,8 @@ module.exports = treasuryExports({
     tokens: [
       nullAddress,
       "0x29127fE04ffa4c32AcAC0fFe17280ABD74eAC313", // SIFU
-      "0xdAC17F958D2ee523a2206206994597C13D831ec7", // USDT
-      "0x6B175474E89094C44Da98b954EedeAC495271d0F", // DAI
+      ADDRESS_CONSTANTS.USDT, // USDT
+      ADDRESS_CONSTANTS.DAI, // DAI
       "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3", // MIM
       "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", // WBTC
       "0xb95BD0793bCC5524AF358ffaae3e38c3903C7626", // uDAI

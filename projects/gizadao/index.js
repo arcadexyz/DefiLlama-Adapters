@@ -1,7 +1,8 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { ohmTvl } = require('../helper/ohm')
 
 const transforms = {
-    "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e": "0x6b175474e89094c44da98b954eedeac495271d0f", // DAI
+    "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e": ADDRESS_CONSTANTS.DAI, // DAI
 }
 
 const treasury = "0x6e273a49Ba8F77d03C0CF5a190f226DcA7D46E9F"

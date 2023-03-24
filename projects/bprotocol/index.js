@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 /*==================================================
   Modules
   ==================================================*/
@@ -22,14 +23,14 @@
   const bKeeperAddress = "0xeaE019ef845A4Ffdb8829210De5D30aC6FbB5371";
   const stabilityPoolAddress = "0x66017D22b0f8556afDd19FC67041899Eb65a21bb";
 
-  const usdcEth = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+  const usdcEth = ADDRESS_CONSTANTS.USDC
   const usdcFantom = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75"
   const usdcArbitrum = "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
   
-  const daiEth = "0x6b175474e89094c44da98b954eedeac495271d0f"
+  const daiEth = ADDRESS_CONSTANTS.DAI
   const daiFantom = "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e"
   
-  const usdtEth = "0xdac17f958d2ee523a2206206994597c13d831ec7"
+  const usdtEth = ADDRESS_CONSTANTS.USDT
   const usdtArbitrum = "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
 
   const fraxEth = "0x853d955aCEf822Db058eb8505911ED77F175b99e"

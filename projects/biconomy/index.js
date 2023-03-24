@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { sumTokens2 } = require("../helper/unwrapLPs");
 const { returnEthBalance } = require("../helper/utils")
@@ -12,9 +13,9 @@ const config = {
     ],
     tokens: [
       '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-      '0x6b175474e89094c44da98b954eedeac495271d0f',
-      '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-      '0xdac17f958d2ee523a2206206994597c13d831ec7',
+      ADDRESS_CONSTANTS.DAI,
+      ADDRESS_CONSTANTS.USDC,
+      ADDRESS_CONSTANTS.USDT,
     ]
   },
   polygon: {

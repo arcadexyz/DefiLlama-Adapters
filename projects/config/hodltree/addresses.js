@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../../utils/constants.js');
 const {
     dexType,
     flashloan,
@@ -32,7 +33,7 @@ const eth = [
             contractType: lendBorrow.lender,
             address: '0xb3e1912fa5d9d219da8c65cda407cc998849428b',
             miscInfo: {
-                tokenIn: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+                tokenIn: ADDRESS_CONSTANTS.WETH
             }
         }, {
             contractType: lendBorrow.borrower,
@@ -57,8 +58,8 @@ const eth = [
                 tokensIn: [
                     '0x57Ab1ec28D129707052df4dF418D58a2D46d5f51',
                     '0x056Fd409E1d7A124BD7017459dFEa2F387b6d5Cd',
-                    '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
-                    '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+                    ADDRESS_CONSTANTS.USDC,
+                    ADDRESS_CONSTANTS.DAI,
                     '0x0000000000085d4780B73119b644AE5ecd22b376'
                 ]
             }
@@ -96,13 +97,13 @@ const eth = [
             contractType: em.rp,
             address: '0x87B46E49681E08E3adDF8A90F6a1fb5183079033',
             miscInfo: {
-                token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
+                token: ADDRESS_CONSTANTS.USDC
             }
         }, {
             contractType: em.vps,
             address: '0xcB72e764Ab46535aAD13cbF55b1F06cB15347A95',
             miscInfo: {
-                token: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
+                token: ADDRESS_CONSTANTS.USDC
             }
         }]
     }

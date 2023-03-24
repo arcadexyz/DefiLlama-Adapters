@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const { ADDRESS_CONSTANTS } = require('utils/constants.js');
 const path = require("path");
 require("dotenv").config();
 const { util: {
@@ -307,7 +308,7 @@ const BigNumber = require("bignumber.js");
 const axios = require("axios");
 
 const ethereumAddress = "0x0000000000000000000000000000000000000000";
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const weth = ADDRESS_CONSTANTS.WETH;
 
 function fixBalances(balances) {
   Object.entries(balances).forEach(([token, value]) => {

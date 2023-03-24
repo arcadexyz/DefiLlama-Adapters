@@ -1,11 +1,12 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const {sumTokens} = require('../helper/unwrapLPs')
 
 const yfdaiTokenAddress = "0xf4CD3d3Fda8d7Fd6C5a500203e38640A70Bf9577";
 const YfDaiStakingAdddress = "0x44d771D0C998f524ff39aB6Df64B72bce1d09566";
 const YfDaiSafetradeStakingAddress = "0x4599cDa238Fb71573fd5A0076C199320e09BCfF0";
-const weth = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
-const dai = "0x6b175474e89094c44da98b954eedeac495271d0f"
+const weth = ADDRESS_CONSTANTS.WETH
+const dai = ADDRESS_CONSTANTS.DAI
 const wethVault = "0x290e5484601986667dC6cA72119f2B85260Ca92E"
 const daiVault = "0x7e537E8B5028a32166F06C8664cdE9D608487428"
 const YfDaiETHLP72HRSVault = "0x75E9F410e8d1D7240b67ec6FE35FA37580b814d9";

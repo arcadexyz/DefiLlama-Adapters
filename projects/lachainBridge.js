@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { sumTokens } = require('./helper/unwrapLPs')
 const { getChainTransform } = require('./helper/portedTokens')
@@ -10,7 +11,7 @@ const config = {
     nativeBridge: ['0xC926f267418d69147c88Edf88e93E78F2153f923'], tokenBridge: ['0x6571DD15430a455118EC6e24Dc7820489ED7019b'], tokens: ['0x55d398326f99059fF775485246999027B3197955'],
   },
   ethereum: {
-    nativeBridge: ['0xc7fc91a0a93d570738b2af6efb1595c3183809d7'], tokenBridge: ['0xAB49eb8Ca42f42fd7e8b745F2CC5BeDfb78d2D3E'], tokens: ['0xdAC17F958D2ee523a2206206994597C13D831ec7'],
+    nativeBridge: ['0xc7fc91a0a93d570738b2af6efb1595c3183809d7'], tokenBridge: ['0xAB49eb8Ca42f42fd7e8b745F2CC5BeDfb78d2D3E'], tokens: [ADDRESS_CONSTANTS.USDT],
   },
   avax: {
     nativeBridge: ['0xD4aE8F772dcf2e20b103c740AfD9D9f9E78dbfFC'], tokenBridge: ['0x8783256443217856B716464A068aabdecc3F0b95'], tokens: ['0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7'],

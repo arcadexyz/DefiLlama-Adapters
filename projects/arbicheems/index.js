@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { stakingUnknownPricedLP } = require("../helper/staking");
 const { pool2Exports } = require("../helper/pool2");
@@ -24,7 +25,7 @@ async function tvl(timestamp, block, chainBlocks) {
   ).output;
   sdk.util.sumSingleBalance(
     balances,
-    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    ADDRESS_CONSTANTS.WETH,
     ethBal
   );
 

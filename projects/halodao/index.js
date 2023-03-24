@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { staking } = require("../helper/staking.js");
 const { sumTokens2 } = require('../helper/unwrapLPs')
@@ -13,7 +14,7 @@ const wrnbwPolyPool = "0xc104e54803abA12f7a171a49DDC333Da39f47193";
 // ETH Pool 2 pool RNBW-ETH
 const rnbwUniPool = {
   lpToken: "0x3E8E036Ddfd310B0838d3CC881A9fa827778845D",
-  token0: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  token0: ADDRESS_CONSTANTS.WETH,
   token1: "0xe94b97b6b43639e238c851a7e693f50033efd75c",
 };
 
@@ -22,25 +23,25 @@ const ethPools = [
     // USDC:XSGD
     lpToken: "0x64DCbDeb83e39f152B7Faf83E5E5673faCA0D42A",
     token0: "0x70e8de73ce538da2beed35d14187f6959a8eca96",
-    token1: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    token1: ADDRESS_CONSTANTS.USDC,
   },
   {
     // USDC:TCAD
     lpToken: "0xE15E50fF9d52beC41D53d3173F2ed40834D455f4",
     token0: "0x00000100F2A2bd000715001920eB70D229700085",
-    token1: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    token1: ADDRESS_CONSTANTS.USDC,
   },
   {
     // USDC:TAUD
     lpToken: "0x11816335DEe6763e2A7B6080b2b2980Eac7F85E4",
     token0: "0x00006100F7090010005F1bd7aE6122c3C2CF0090",
-    token1: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    token1: ADDRESS_CONSTANTS.USDC,
   },
   {
     // USDC:TGBP
     lpToken: "0x2ED09E2961D72659E4002ba8C2BaDfedC7db19B7",
     token0: "0x00000000441378008ea67f4284a57932b1c000a5",
-    token1: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    token1: ADDRESS_CONSTANTS.USDC,
   },
 ];
 
@@ -89,7 +90,7 @@ const arbiPools = [
 //Converts Polygon tokens to ETH tokens cause CoinGecko
 const tokenConvert = {
   "0x2791bca1f2de4661ed88a30c99a7a9449aa84174":
-    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+    ADDRESS_CONSTANTS.USDC, // USDC
 };
 
 async function calcTvl(pools, block, chain) {

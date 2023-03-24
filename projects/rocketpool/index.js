@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk")
 const abi = require('./abi.json')
 
@@ -5,7 +6,7 @@ const rocketMinipoolManager = '0x6293B8abC1F36aFB22406Be5f96D893072A8cF3a'
 const rocketVault = '0x3bDC69C4E5e13E52A65f5583c23EFB9636b469d6'
 const rocketNodeStaking_contract = '0x3019227b2b8493e45Bf5d25302139c9a2713BF15'
 
-const weth = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+const weth = ADDRESS_CONSTANTS.WETH
 const rpl = '0xd33526068d116ce69f19a9ee46f0bd304f21a51f'
 
 async function tvl(timestamp, ethBlock, chainBlocks) {

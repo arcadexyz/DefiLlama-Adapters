@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const abi = require("./abi.json");
 const { staking } = require("../helper/staking");
@@ -111,7 +112,7 @@ async function crvTvls(balances, crvPools, block, chain) {
 
   for (let i = 0; i < crvPools.length; i++) {
     const balance = BigNumber(Number(lpPrices) / 1e18).times(Number(totalEpochDeposits[i].output)).div(1e12).toFixed(0);
-    sdk.util.sumSingleBalance(balances, "0xdac17f958d2ee523a2206206994597c13d831ec7", balance);
+    sdk.util.sumSingleBalance(balances, ADDRESS_CONSTANTS.USDT, balance);
   }
 }
 

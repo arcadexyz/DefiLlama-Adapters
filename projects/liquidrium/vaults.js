@@ -1,10 +1,11 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const vaults = [
     {
         name: "usdc-eth",
         address: "0xF82aeDC7faA3Fe1F412C71fe5E432690C46cd1bb", 
-        token1: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        token2: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        token1: ADDRESS_CONSTANTS.USDC,
+        token2: ADDRESS_CONSTANTS.WETH,
         token1decimal: 6,
         token2decimal: 18,
         token1Name: "usd-coin",
@@ -15,7 +16,7 @@ const vaults = [
         name: "wbtc-eth",
         address: "0x3FeE1B1C829DB1250B0e6B8605741E944Ed3A41e", 
         token1: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        token2: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        token2: ADDRESS_CONSTANTS.WETH,
         token1decimal: 8,
         token2decimal: 18,
         token1Name: "wrapped-bitcoin",

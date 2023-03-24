@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 
 const sdk = require('@defillama/sdk');
 const abi = require('./abi.json');
@@ -14,13 +15,13 @@ const markets = [
     cToken: '0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E',
   },
   {
-    underlying: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+    underlying: ADDRESS_CONSTANTS.DAI,
     symbol: 'DAI',
     decimals: 18,
     cToken: '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643',
   },
   {
-    underlying: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    underlying: ADDRESS_CONSTANTS.WETH,
     symbol: 'WETH',
     decimals: 18,
     cToken: '0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5',
@@ -32,13 +33,13 @@ const markets = [
     cToken: '0x158079Ee67Fce2f58472A96584A73C7Ab9AC95c1',
   },
   {
-    underlying: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    underlying: ADDRESS_CONSTANTS.USDC,
     symbol: 'USDC',
     decimals: 6,
     cToken: '0x39AA39c021dfbaE8faC545936693aC917d5E7563',
   },
   {
-    underlying: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+    underlying: ADDRESS_CONSTANTS.USDT,
     symbol: 'USDT',
     decimals: 6,
     cToken: '0xf650C3d88D12dB855b8bf7D11Be6C55A4e07dCC9',
@@ -83,7 +84,7 @@ async function getMarkets(block) {
   } else {
     const markets = [{
       cToken: CTOKEN_WETH,
-      underlying: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', //cETH => WETH
+      underlying: ADDRESS_CONSTANTS.WETH, //cETH => WETH
     }]
 
     const allCTokens = await getAllCTokens(block)

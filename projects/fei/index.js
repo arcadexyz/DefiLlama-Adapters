@@ -1,7 +1,8 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { sumTokensAndLPsSharedOwners } = require('../helper/unwrapLPs')
 
-const weth = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+const weth = ADDRESS_CONSTANTS.WETH
 
 async function tvl(timestamp, block) {
   const balances = {}

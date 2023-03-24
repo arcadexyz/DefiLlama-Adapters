@@ -1,8 +1,9 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const {sumTokens} = require('../helper/unwrapLPs')
 
-const dai = "0x6b175474e89094c44da98b954eedeac495271d0f"
-const usdc = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+const dai = ADDRESS_CONSTANTS.DAI
+const usdc = ADDRESS_CONSTANTS.USDC
 async function eth(timestamp, block) {
     const balances = {}
     await sumTokens(balances, [

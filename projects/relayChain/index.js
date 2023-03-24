@@ -1,12 +1,13 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { getChainTransform } = require('../helper/portedTokens');
 const { sumTokens } = require('../helper/unwrapLPs')
 
-const usdtEth = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-const daiEth = "0x6b175474e89094c44da98b954eedeac495271d0f";
+const usdtEth = ADDRESS_CONSTANTS.USDT;
+const daiEth = ADDRESS_CONSTANTS.DAI;
 const wbtcEth = "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599";
-const usdcEth = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
-const wethEth = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+const usdcEth = ADDRESS_CONSTANTS.USDC;
+const wethEth = ADDRESS_CONSTANTS.WETH;
 const relayEth = "0x5D843Fa9495d23dE997C394296ac7B4D721E841c";
 const xcasEth = "0x7659CE147D0e714454073a5dd7003544234b6Aa0";
 const trueUSDEth = "0x0000000000085d4780B73119b644AE5ecd22b376";
@@ -170,7 +171,7 @@ async function ethTvl(timestamp, ethBlock) {
   })
 
   tokenBalance = (await sdk.api.eth.getBalance({ target: eth1Addr })).output;
-  sdk.util.sumSingleBalance(balances, "ethereum:" + "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", tokenBalance)
+  sdk.util.sumSingleBalance(balances, "ethereum:" + ADDRESS_CONSTANTS.WETH, tokenBalance)
 
   return sumTokens(balances, toa, ethBlock)
 }

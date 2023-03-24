@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const { toUSDTBalances } = require('../helper/balances')
 
@@ -67,8 +68,8 @@ const bobaPutVault = '0xff5fe7909fc4d0d6643f1e8be8cba72610d0b485'
 
 
 // Ethereum Assets
-const weth = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
-const usdc = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
+const weth = ADDRESS_CONSTANTS.WETH
+const usdc = ADDRESS_CONSTANTS.USDC
 const wbtc = '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599'
 const ust = '0xa693b19d2931d498c5b318df961919bb4aee87a5'
 const tUSDC = '0x9f238fae3d1f1982716f136836fc2c0d1c2928ab'

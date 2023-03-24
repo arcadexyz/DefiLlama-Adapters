@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const BigNumber = require('bignumber.js')
 const { transformBalances } = require('../helper/portedTokens.js')
@@ -5,9 +6,9 @@ const { staking } = require('../helper/staking')
 
 const {getLiquityTvl} = require('../helper/liquity')
 
-const ETH_ADDR = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const ETH_ADDR = ADDRESS_CONSTANTS.WETH;
 const BTC_ADDR = "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599";
-const USDC_ADDR = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const USDC_ADDR = ADDRESS_CONSTANTS.USDC;
 
 const iotexTMs = {
     "0x366D48c04B0d315acF27Bd358558e92D4e2E9f3D": "0xa00744882684c3e4747faefd68d283ea44099d03", // WIOTX
@@ -21,7 +22,7 @@ const iotexStableAPs = {
     "0xc67cF429b055D664c7Ba06c9F5D17d0692C554fC": "0x6fbcdc1169b5130c59e72e51ed68a84841c98cd1", // USDT v2
 }
 const ethStables = {
-    "0xC0eb7718fF1B5fBF11cd314CbC212c167bF341DB": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+    "0xC0eb7718fF1B5fBF11cd314CbC212c167bF341DB": ADDRESS_CONSTANTS.USDC, // USDC
 }
 // node test.js projects/xdollar-finance/index.js
 

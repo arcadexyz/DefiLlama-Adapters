@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 /*==================================================
   Modules
   ==================================================*/
@@ -12,8 +13,8 @@ const { getLogs } = require('../helper/cache/getLogs')
 Settings
 ==================================================*/
 
-const wETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
-const usdt = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
+const wETH = ADDRESS_CONSTANTS.WETH;
+const usdt = ADDRESS_CONSTANTS.USDT;
 const yyCrv = '0x5dbcF33D8c2E976c6b560249878e6F1491Bca25c';
 const yETH = '0xe1237aA7f535b0CC33Fd973D66cBf830354D16c7';
 const crYFI = '0xCbaE0A83f4f9926997c8339545fb8eE32eDc6b76';

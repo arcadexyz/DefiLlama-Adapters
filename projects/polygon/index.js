@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens2 } = require('../helper/unwrapLPs')
 
 async function tvl(_, block) {
@@ -16,7 +17,7 @@ async function tvl(_, block) {
 
     const erc20Tokens = [
         '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0',
-        '0x6b175474e89094c44da98b954eedeac495271d0f',
+        ADDRESS_CONSTANTS.DAI,
         '0x3F382DbD960E3a9bbCeaE22651E88158d2791550',
         '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9',
         '0x514910771af9ca656af840dff83e8264ecf986ca',
@@ -31,10 +32,10 @@ async function tvl(_, block) {
         '0x56d811088235F11C8920698a204A5010a788f4b3',
         '0xcfcecfe2bd2fed07a9145222e8a7ad9cf1ccd22a',
         // '0x17ac188e09a7890a1844e5e65471fe8b0ccfadf3',
-        '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+        ADDRESS_CONSTANTS.USDC,
         '0x3845badAde8e6dFF049820680d1F14bD3903a5d0',
         '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
-        '0xdac17f958d2ee523a2206206994597c13d831ec7',
+        ADDRESS_CONSTANTS.USDT,
         '0xe0cca86b254005889ac3a81e737f56a14f4a38f5',
         '0x09617f6fd6cf8a71278ec86e23bbab29c04353a7',
         '0xd2ba23de8a19316a638dc1e7a9adda1d74233368',

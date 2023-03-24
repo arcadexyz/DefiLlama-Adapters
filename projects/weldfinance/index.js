@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { masterchefExports, } = require("../helper/unknownTokens")
 const sdk = require('@defillama/sdk')
 
@@ -18,8 +19,8 @@ async function verifyTvl() {
   const bals = await sdk.api2.abi.multiCall({
     abi: 'erc20:balanceOf',
     calls: [
-      { target: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', params: fireBlockAccount },
-      { target: '0xdac17f958d2ee523a2206206994597c13d831ec7', params: fireBlockAccount },
+      { target: ADDRESS_CONSTANTS.USDC, params: fireBlockAccount },
+      { target: ADDRESS_CONSTANTS.USDT, params: fireBlockAccount },
     ],
   })
 

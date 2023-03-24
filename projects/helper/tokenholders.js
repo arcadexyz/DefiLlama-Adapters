@@ -1,8 +1,9 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens } = require('./unwrapLPs')
 const sdk = require('@defillama/sdk')
 
 
-const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+const WETH = ADDRESS_CONSTANTS.WETH
 
 function normalizeArray(arrayOrString){
     if(Array.isArray(arrayOrString)){
@@ -42,7 +43,7 @@ function tokenHolderBalances(tokenHolderMap, chain = 'ethereum') {
             switch (chain) {
                 case 'bsc': nativeToken = 'bsc:0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'; break;  // wbnb
                 case 'polygon': nativeToken = '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0'; break;   // matic
-                case 'xdai': nativeToken = '0x6b175474e89094c44da98b954eedeac495271d0f'; break;   // xdai
+                case 'xdai': nativeToken = ADDRESS_CONSTANTS.DAI; break;   // xdai
                 case 'avax': nativeToken = 'avax:0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7'; break;   // avax
             }
             ethBalances.output.forEach(ethBal => {

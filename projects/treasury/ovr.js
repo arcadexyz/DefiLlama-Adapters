@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { treasuryExports, } = require("../helper/treasury");
 
 const OVR = {
@@ -5,7 +6,7 @@ const OVR = {
   polygon: "0x1631244689EC1fEcbDD22fb5916E920dFC9b8D30",
 };
 
-const DAI = "0x6b175474e89094c44da98b954eedeac495271d0f";
+const DAI = ADDRESS_CONSTANTS.DAI;
 const IBCO = "0x8c19cF0135852BA688643F57d56Be72bB898c411";
 
 module.exports = treasuryExports({

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const {nullAddress, sumTokens2} = require('../helper/unwrapLPs')
 const sdk = require('@defillama/sdk')
 
@@ -12,8 +13,8 @@ const contracts = {
 
 const listedTokens = [
   nullAddress,
-  '0xdac17f958d2ee523a2206206994597c13d831ec7',
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+  ADDRESS_CONSTANTS.USDT,
+  ADDRESS_CONSTANTS.DAI,
   '0xd26114cd6EE289AccF82350c8d8487fedB8A0C07',
   '0x940a2db1b7008b6c776d4faaca729d6d4a4aa551',
   '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
@@ -21,7 +22,7 @@ const listedTokens = [
   '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
   '0xe41d2489571d322189246dafa5ebde1f4699f498',
   '0xcc80c051057b774cd75067dc48f8987c4eb97a5e',
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  ADDRESS_CONSTANTS.USDC,
   '0x419d0d8bdd9af5e606ae2232ed285aff190e711b',
   '0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d',
   '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',

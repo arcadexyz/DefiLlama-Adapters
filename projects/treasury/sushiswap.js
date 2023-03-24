@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 const sushiSwapTreasury = "0xe94B5EEC1fA96CEecbD33EF5Baa8d00E4493F4f3";
@@ -8,7 +9,7 @@ module.exports = treasuryExports({
   ethereum: {
     tokens: [ 
         nullAddress,
-        '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',//USDC
+        ADDRESS_CONSTANTS.USDC,//USDC
      ],
     owners: [sushiSwapTreasury],
     ownTokens: [SUSHI],

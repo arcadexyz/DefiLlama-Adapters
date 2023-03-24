@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { sumTokens2, nullAddress, } = require('../helper/unwrapLPs')
 
 const getBridgeContract = (chain) => {
@@ -30,11 +31,11 @@ const tokensConf = {
   ethereum: {
     ETH: nullAddress,
     BUSD: "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
-    USDC: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-    USDT: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-    DAI: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    USDC: ADDRESS_CONSTANTS.USDC,
+    USDT: ADDRESS_CONSTANTS.USDT,
+    DAI: ADDRESS_CONSTANTS.DAI,
     HBTC: "0x0316EB71485b0Ab14103307bf65a021042c6d380",
-    WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    WETH: ADDRESS_CONSTANTS.WETH,
     SWFTC: "0x0bb217e40f8a5cb79adf04e1aab60e5abd0dfc1e",
     HT: "0x6f259637dcd74c767781e37bc6133cd6a68aa161",
   },

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 /* Genius staking operates on two models:
 *  - Direct staking with GENI token.
 *    - Policy: Basic (basicLockedMinersSupply())
@@ -34,7 +35,7 @@ const STABILITY_POOL_COLLATERAL_ADDRESSES = {
     "BNB": nullAddress,
   },
   "ethereum": {
-    "DAI": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "DAI": ADDRESS_CONSTANTS.DAI,
     "ETH": nullAddress,
   },
   "avax": {

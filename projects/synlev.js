@@ -1,6 +1,7 @@
+const { ADDRESS_CONSTANTS } = require('../utils/constants.js');
 const sdk = require("@defillama/sdk")
 
-const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+const WETH = ADDRESS_CONSTANTS.WETH;
 async function tvl(ts, block) {
   const balances = {}
   const { output: balance1 } = await sdk.api.eth.getBalance({ target: '0xFf40827Ee1c4Eb6052044101E1C6E28DBe1440e3', block })

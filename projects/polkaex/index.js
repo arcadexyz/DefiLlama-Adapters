@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { getUniTVL } = require('../helper/unknownTokens')
 const { stakings } = require("../helper/staking");
 const { getFixBalances } = require('../helper/portedTokens');
@@ -13,7 +14,7 @@ const NATIVE_TOKENS = {
     WASTAR: "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720",
     WSDN: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
     WBNB: "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
-    WETH: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+    WETH: ADDRESS_CONSTANTS.WETH
 }
 
 const TOKENS = {
@@ -39,7 +40,7 @@ const TOKENS = {
         WBNB: NATIVE_TOKENS.WBNB
     },
     ethereum: {
-        USDC: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        USDC: ADDRESS_CONSTANTS.USDC,
         WETH: NATIVE_TOKENS.WETH
     }
 }

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const {unwrapUniswapLPs} = require('../helper/unwrapLPs')
 
@@ -5,7 +6,7 @@ const STAKING_ADDRESS = '0x2d615795a8bdb804541C69798F13331126BA0c09';
 
 const USDC_TOKEN = {
     symbol: 'USDC',
-    address: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    address: ADDRESS_CONSTANTS.USDC,
     decimals: 6,
 };
 

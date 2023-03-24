@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk')
 const { get } = require('../helper/http')
 const { getConfig } = require('../helper/cache')
@@ -28,9 +29,9 @@ const farms = {
   ],
   ethereum: [
     '0x0000000000000000000000000000000000000000',// ETH
-    '0xdAC17F958D2ee523a2206206994597C13D831ec7',// USDT
-    '0x6B175474E89094C44Da98b954EedeAC495271d0F',// DAI
-    '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',// USDC
+    ADDRESS_CONSTANTS.USDT,// USDT
+    ADDRESS_CONSTANTS.DAI,// DAI
+    ADDRESS_CONSTANTS.USDC,// USDC
     '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',// WBTC
   ]
 }

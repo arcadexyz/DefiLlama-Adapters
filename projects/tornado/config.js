@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 module.exports = {
   ethereum: [
     {
@@ -11,7 +12,7 @@ module.exports = {
       checkETHBalance: true,
     },
     {
-      tokens: '0x6b175474e89094c44da98b954eedeac495271d0f',   // DAI
+      tokens: ADDRESS_CONSTANTS.DAI,   // DAI
       holders: [
         "0xD4B88Df4D29F5CedD6857912842cff3b20C8Cfa3",
         "0xFD8610d20aA15b7B2E3Be39B396a1bC3516c7144",
@@ -20,7 +21,7 @@ module.exports = {
       ],
     },
     {
-      tokens: '0xdac17f958d2ee523a2206206994597c13d831ec7',   // USDT
+      tokens: ADDRESS_CONSTANTS.USDT,   // USDT
       holders: [
         "0x169AD27A470D064DEDE56a2D3ff727986b15D52B",
         "0x0836222F2B2B24A3F36f98668Ed8F0B38D1a872f",
@@ -29,7 +30,7 @@ module.exports = {
       ],
     },
     {
-      tokens: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',   // USDC
+      tokens: ADDRESS_CONSTANTS.USDC,   // USDC
       holders: [
         "0xd96f2B1c14Db8458374d9Aca76E26c3D18364307",
         "0x4736dCf1b7A3d580672CcE6E7c65cd5cc9cFBa9D",

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require('@defillama/sdk');
 const solana = require('../helper/solana')
 const { stakings } = require('../helper/staking');
@@ -23,7 +24,7 @@ const pools = {
 
 const usdcByChain = {
   bsc: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
-  ethereum: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  ethereum: ADDRESS_CONSTANTS.USDC,
   polygon: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
   fantom: '0x04068da6c83afcfa0e13ba15a6696662335d5b75',
   avax: '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664',

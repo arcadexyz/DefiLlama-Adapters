@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 /*==================================================
   Modules
   ==================================================*/
@@ -22,7 +23,7 @@
 
   const tokenAddresses = [
     '0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671', // NMR
-    '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI
+    ADDRESS_CONSTANTS.DAI // DAI
   ]
 
 /*==================================================

@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { ohmTvl } = require("../helper/ohm");
 
 const treasury = "0xDF2A28Cc2878422354A93fEb05B41Bd57d71DB24"
@@ -16,7 +17,7 @@ module.exports=ohmTvl(
     LUX,
     (addr) => {
         if (addr.toLowerCase() === "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e") {
-          return "0x6b175474e89094c44da98b954eedeac495271d0f";
+          return ADDRESS_CONSTANTS.DAI;
         }
         return `fantom:${addr}`;
     }

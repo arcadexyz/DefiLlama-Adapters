@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { staking, stakings } = require("../helper/staking");
 const { sumTokensAndLPsSharedOwners } = require("../helper/unwrapLPs");
@@ -34,9 +35,9 @@ const platformLiquidityContracts = [
   "0xe6e5220291CF78b6D93bd1d08D746ABbC115C64b",
 ];
 
-const USDT = "0xdac17f958d2ee523a2206206994597c13d831ec7";
-const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
-const USDC = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const USDT = ADDRESS_CONSTANTS.USDT;
+const WETH = ADDRESS_CONSTANTS.WETH;
+const USDC = ADDRESS_CONSTANTS.USDC;
 const ETHVOL_USDC_UNIV2 = "0x197e99bD87F98DFde461afE3F706dE36c9635a5D";
 const WETH_COTI_UNIV2 = "0xA2b04F8133fC25887A436812eaE384e32A8A84F2";
 

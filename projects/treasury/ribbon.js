@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { nullAddress, treasuryExports } = require("../helper/treasury");
 
 // Treasury
@@ -11,9 +12,9 @@ module.exports = treasuryExports({
       nullAddress,
       "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", // wstETH
       "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32", // LDO
-      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", // WETH
+      ADDRESS_CONSTANTS.WETH, // WETH
       "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599", // WBTC
-      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC
+      ADDRESS_CONSTANTS.USDC, // USDC
       "0xae78736Cd615f374D3085123A210448E74Fc6393", // rETH
       "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84", // stETH
       "0xba100000625a3754423978a60c9317c58a424e3D", // BAL

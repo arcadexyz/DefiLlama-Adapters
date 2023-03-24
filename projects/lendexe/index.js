@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { compoundExports } = require('../helper/compound')
 const { nullAddress } = require('../helper/tokenMapping')
 const { lendingMarket } = require("../helper/methodologies");
@@ -7,8 +8,8 @@ const u = undefined
 const { tvl, borrowed } = compoundExports('0x2c7b7A776b5c3517B77D05B9313f4699Fb38a8d3',u,'0x36e66547e27a5953f6ca3d46cc2663d9d6bdc59e', nullAddress, undefined, undefined, { fetchBalances: true, blacklistedTokens: ['0x53011e93f21ec7a74cdfbb7e6548f1abce306833'] })
 
 const mapping = {
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48': 6,
-  '0xdac17f958d2ee523a2206206994597c13d831ec7': 6,
+  [ADDRESS_CONSTANTS.USDC]: 6,
+  [ADDRESS_CONSTANTS.USDT]: 6,
   '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599': 8,
 }
 async function borrowedWrapped(_, _1, _2, { api }) {

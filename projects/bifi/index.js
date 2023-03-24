@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { stakings } = require("../helper/staking");
 const { sumTokens2, nullAddress } = require('../helper/unwrapLPs')
@@ -9,11 +10,11 @@ const ethPool = '0x13000c4a215efe7e414bb329b2f11c39bcf92d78';
 const ethTokenPools = {
     'usdt': {
         'pool': '0x808c3ba97268dbf9695b1ec10729e09c7e67a9e3',
-        'token': '0xdac17f958d2ee523a2206206994597c13d831ec7'
+        'token': ADDRESS_CONSTANTS.USDT
     },
     'dai': {
         'pool': '0xd76b7060f1b646fa14740ff6ac670a4f0a6fc5e3',
-        'token': '0x6b175474e89094c44da98b954eedeac495271d0f'
+        'token': ADDRESS_CONSTANTS.DAI
     },
     'link': {
         'pool': '0x25567603eb61a4a49f27e433652b5b8940d10682',
@@ -21,7 +22,7 @@ const ethTokenPools = {
     },
     'usdc': {
         'pool': '0x128647690C7733593aA3Dd149EeBC5e256E79217',
-        'token': '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
+        'token': ADDRESS_CONSTANTS.USDC
     },
     'wbtc': {
         'pool': '0x93948Aa8488F522d5b079AF84fe411FBCE476e9f',

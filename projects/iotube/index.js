@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const { request, gql } = require("graphql-request");
 
 const apiURL = "https://smart-graph.iotex.me/iotube/graphql";
@@ -137,16 +138,16 @@ const variables = {
   ],
   ethTokens: [
     "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
-    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    ADDRESS_CONSTANTS.WETH,
     "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
     "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     "0x8861cfF2366C1128fd699B68304aD99a0764Ef9a",
     "0x4Fabb145d64652a948d72533023f6E7A623C7C53",
     "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
     "0x45804880de22913dafe09f4980848ece6ecbaf78",
-    "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-    "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-    "0x6b175474e89094c44da98b954eedeac495271d0f",
+    ADDRESS_CONSTANTS.USDT,
+    ADDRESS_CONSTANTS.USDC,
+    ADDRESS_CONSTANTS.DAI,
     "0xD227c3e4f3F8dE94180269eF9DC221a6efc1F4C4",
     "0xf79deaBc1406a3AD07c70877fBaEb90777B77E68",
   ],

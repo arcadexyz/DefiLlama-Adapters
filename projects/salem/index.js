@@ -1,3 +1,4 @@
+const { ADDRESS_CONSTANTS } = require('../../utils/constants.js');
 const sdk = require("@defillama/sdk");
 const { addFundsInMasterChef } = require("../helper/masterchef");
 const { stakingUnknownPricedLP } = require("../helper/staking");
@@ -28,7 +29,7 @@ const ftmPool2 = [
 
 const translate = {
     "0xb44a9b6905af7c801311e8f4e76932ee959c663c": "fantom:0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
-    "0xf2001b145b43032aaf5ee2884e456ccd805f677d": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "0xf2001b145b43032aaf5ee2884e456ccd805f677d": ADDRESS_CONSTANTS.DAI,
     "0x7dff46370e9ea5f0bad3c4e29711ad50062ea7a4": "bsc:0x570a5d26f7765ecb712c0924e4de545b89fd43df"
 };
 
