@@ -1,7 +1,9 @@
 const sdk = require("@defillama/sdk");
 
 const { fetchVaults, fetchLoans } = require('./queries');
+const { stakingTvl } = require('./staking-queries');
 const { sumTokens2 } = require('../helper/unwrapLPs');
+const { staking } = require("../helper/staking");
 const { sumArtBlocks, isArtBlocks, } = require('../helper/nft');
 
 const {
@@ -9,14 +11,21 @@ const {
   LOAN_CORE_V3,
   START_BLOCKS,
   VAULT_FACTORY_A,
+  ARCD_WETH_LP,
+  STAKING_REWARDS,
 } = require('./constants');
+
+// to run: node test.js projects/arcade-xyz/index.js
 
 // Uses chainlink oracle floor price for all whitelisted NFTS owned by every vault and the Loan Core contract.
 // Tokens owned by vaults have been wrapped into an Arcade.xyz vault. Tokens owned by the Loan Core contract
 // are currently in escrow.
+
 async function tvl(api) {
+  const block = await api.getBlock();
+
   // Get list of all vaults
-  const vaults = await fetchVaults(api.block)
+  const vaults = await fetchVaults(block)
   const balances = {}
   const artBlockOwners = []
 
@@ -35,6 +44,7 @@ async function tvl(api) {
   }
 
   await sumArtBlocks({ balances, api, owners: artBlockOwners, })
+
   // Initialize balances with tokens held by the escrow contract, Loan Core
   return sumTokens2({
     balances,
@@ -46,7 +56,7 @@ async function tvl(api) {
 
 // Fetches all active loans, their payable curency and amount borrowed then sums it up.
 async function borrowed(api) {
-  const loans = await fetchLoans(api.block);
+  const loans = await fetchLoans(await api.getBlock());
 
   // Iterate over each loan to sum up principal by currency
   for (const loan of loans) {
@@ -59,10 +69,29 @@ async function borrowed(api) {
   return api.getBalances();
 }
 
+// fetch staking balances outside of pool2
+async function staked(api) {
+  const { timestamp } = api;
+  const block = await api.getBlock();
+
+  const balances = {};
+
+  const stakingBalances = await stakingTvl(timestamp, block, { api });
+  Object.keys(stakingBalances).forEach(token => {
+    sdk.util.sumSingleBalance(balances, token, stakingBalances[token]);
+  });
+
+  return stakingBalances;
+}
+
 module.exports = {
   methodology: `Sums up the floor value of all vaulted and escrowed NFTs with Chainlink price feeds. Borrowed coins are not counted towards the TVL`,
   start: START_BLOCKS[VAULT_FACTORY_A],
-  ethereum: { tvl, borrowed },
+  ethereum: {
+    tvl,
+    staking: staked,
+    pool2: staking(STAKING_REWARDS, [ARCD_WETH_LP]),
+    borrowed },
   hallmarks: [
     [1660762840, 'V2 Protocol Launch'],
     [1694026811, 'V3 Protocol Launch'],
